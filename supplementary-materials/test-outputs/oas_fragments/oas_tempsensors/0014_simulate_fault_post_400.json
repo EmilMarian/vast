@@ -1,0 +1,35 @@
+{
+  "method": "POST",
+  "parameters": [],
+  "path": "/simulate/fault",
+  "requestBody": {
+    "content": {
+      "application/json": {
+        "schema": {
+          "properties": {
+            "fault_mode": {
+              "enum": [
+                "none",
+                "stuck",
+                "drift",
+                "spike",
+                "dropout"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "fault_mode"
+          ],
+          "type": "object"
+        }
+      }
+    },
+    "required": true
+  },
+  "responses": {
+    "400": {
+      "description": "Bad request"
+    }
+  }
+}

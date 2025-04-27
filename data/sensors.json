@@ -1,0 +1,92 @@
+{
+    "sensors": {
+      "TEMP001": {
+        "type": "temperature",
+        "location": "greenhouse-north",
+        "environment": "greenhouse",
+        "crop_type": "tomato",
+        "soil_type": "loam",
+        "active": true,
+        "base_temp": 25.0,
+        "variation": 0.5,
+        "trend": 0.0,
+        "created_at": "2025-03-01T12:00:00"
+      },
+      "TEMP002": {
+        "type": "temperature",
+        "location": "greenhouse-south",
+        "environment": "greenhouse",
+        "crop_type": "cucumber",
+        "soil_type": "sandy loam",
+        "active": true,
+        "base_temp": 26.5,
+        "variation": 0.7,
+        "trend": 0.05,
+        "created_at": "2025-03-01T12:00:00"
+      },
+      "TEMP003": {
+        "type": "temperature",
+        "location": "field-east",
+        "environment": "field",
+        "crop_type": "corn",
+        "soil_type": "clay",
+        "active": true,
+        "base_temp": 22.0,
+        "variation": 1.2,
+        "trend": -0.03,
+        "created_at": "2025-03-01T12:00:00"
+      },
+      "TEMP004": {
+        "type": "temperature",
+        "location": "field-west",
+        "environment": "field",
+        "crop_type": "wheat",
+        "soil_type": "silty",
+        "active": true,
+        "base_temp": 23.5,
+        "variation": 1.5,
+        "trend": 0.0,
+        "created_at": "2025-03-01T12:00:00"
+      },
+      "HUM001": {
+        "type": "humidity",
+        "location": "greenhouse-north",
+        "environment": "greenhouse",
+        "crop_type": "tomato",
+        "active": true,
+        "base_humidity": 65.0,
+        "humidity_variation": 5.0,
+        "created_at": "2025-03-01T12:00:00"
+      },
+      "HUM002": {
+        "type": "humidity",
+        "location": "greenhouse-south",
+        "environment": "greenhouse",
+        "crop_type": "cucumber",
+        "active": true,
+        "base_humidity": 70.0,
+        "humidity_variation": 4.0,
+        "created_at": "2025-03-01T12:00:00"
+      },
+      "SOIL001": {
+        "type": "soil_moisture",
+        "location": "greenhouse-north",
+        "environment": "greenhouse",
+        "crop_type": "tomato",
+        "soil_type": "loam",
+        "active": true,
+        "base_moisture": 45.0,
+        "moisture_variation": 3.0,
+        "created_at": "2025-03-01T12:00:00"
+      },
+      "LIGHT001": {
+        "type": "light",
+        "location": "greenhouse-north",
+        "environment": "greenhouse",
+        "crop_type": "tomato",
+        "active": true,
+        "light_variation": 150.0,
+        "created_at": "2025-03-01T12:00:00"
+      }
+    }
+  }

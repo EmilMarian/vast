@@ -1,0 +1,29 @@
+{
+  "method": "POST",
+  "parameters": [],
+  "path": "/config/calibrate",
+  "requestBody": {
+    "content": {
+      "application/json": {
+        "schema": {
+          "properties": {
+            "base_temperature": {
+              "format": "float",
+              "type": "number"
+            }
+          },
+          "required": [
+            "base_temperature"
+          ],
+          "type": "object"
+        }
+      }
+    },
+    "required": true
+  },
+  "responses": {
+    "400": {
+      "description": "Bad request"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+<testsuite failures="1" name="ID_001_krtestoas_config_GET_verified.feature" skipped="0" tests="1" time="2.221149"><testcase classname="ID_001_krtestoas_config_GET_verified" name="Test Authentication for Protected Configuration Endpoint" time="2.221149"><failure message="unexpected 'configure' key: 'basicAuthFunction'&#10;classpath:ID_001_krtestoas_config_GET_verified.feature:15">* url 'http://192.168.1.109:12384' ........................................ passed
+Given path '/config' ...................................................... passed
+When method get ........................................................... passed
+Then status 401 ........................................................... passed
+And match response.error == 'Unauthorized' ................................ passed
+Given path '/config' ...................................................... passed
+And configure basicAuthFunction = function() { return 'user:wrongpass' } .. failed
+
+Stack Trace:
+com.intuit.karate.KarateException: unexpected 'configure' key: 'basicAuthFunction'
+classpath:ID_001_krtestoas_config_GET_verified.feature:15&#13;
+	at &lt;feature&gt;.: And configure basicAuthFunction = function() { return 'user:wrongpass' } (classpath:ID_001_krtestoas_config_GET_verified.feature:15:15)&#13;
+
+When method get ........................................................... skipped
+Then status 401 ........................................................... skipped
+And match response.error == 'Unauthorized' ................................ skipped
+Given path '/config' ...................................................... skipped
+And configure basicAuthFunction = function() { return 'admin:admin' } ..... skipped
+When method get ........................................................... skipped
+Then status 200 ........................................................... skipped
+And match response.sensor_id == 'TEMP004' ................................. skipped
+And match response.type == 'temperature' .................................. skipped
+And match response.mqtt_topic == 'sensors/temperature' .................... skipped
+* configure basicAuthFunction = null ...................................... skipped
+</failure></testcase>
+</testsuite>

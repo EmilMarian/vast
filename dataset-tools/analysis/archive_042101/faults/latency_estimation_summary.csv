@@ -1,0 +1,13 @@
+latency_column,estimation_method,count
+latency_ms_temperature_temperature-sensor-01,interpolation,750
+latency_ms_fault_status_temperature-sensor-01,highest_bucket,750
+latency_ms_resources_temperature-sensor-01,interpolation,750
+latency_ms_temperature_temperature-sensor-02,highest_bucket,750
+latency_ms_fault_status_temperature-sensor-02,highest_bucket,750
+latency_ms_resources_temperature-sensor-02,interpolation,750
+latency_ms_temperature_temperature-sensor-03,highest_bucket,750
+latency_ms_fault_status_temperature-sensor-03,highest_bucket,750
+latency_ms_resources_temperature-sensor-03,interpolation,750
+latency_ms_temperature_temperature-sensor-04,highest_bucket,750
+latency_ms_fault_status_temperature-sensor-04,highest_bucket,750
+latency_ms_resources_temperature-sensor-04,interpolation,750

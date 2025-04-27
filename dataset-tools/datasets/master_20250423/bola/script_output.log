@@ -1,0 +1,248 @@
+Datasets will be saved to: datasets/master_20250423/bola
+=====================================================
+Processing BOLA under fault condition: none
+=====================================================
+Setting fault mode to: none
+Collecting baseline data for none fault...
+Starting data collection for event: bola_none_baseline
+Duration: 120 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24
+Completed collection with 24 snapshots.
+Dataset saved to: datasets/master_20250423/bola/none_fault/bola_none_baseline_20250423_214414.jsonl
+Baseline data collected: datasets/master_20250423/bola/none_fault/bola_none_baseline_20250423_214414.jsonl
+Starting data collection for BOLA attack under none fault...
+Data collector running with PID 337315
+Executing BOLA attack (accessing premium user data)
+BOLA attack iteration 1/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745433984.2873006,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 2/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745433994.0277615,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 3/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434010.0588906,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 4/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434026.093136,"sensor_id":"TEMP004","temperature":...
+BOLA attack iteration 5/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434042.1252577,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 6/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434058.1614997,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 7/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434074.1958175,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 8/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434088.4795096,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 9/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434104.5103936,"sensor_id":"TEMP004","temperature"...
+Waiting for data collection to complete...
+Starting data collection for event: bola_none_attack
+Duration: 180 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36
+Completed collection with 36 snapshots.
+Dataset saved to: datasets/master_20250423/bola/none_fault/bola_none_attack_20250423_214615.jsonl
+BOLA attack data collected: datasets/master_20250423/bola/none_fault/bola_none_attack_20250423_214615.jsonl
+Collecting post-event data for none fault...
+Starting data collection for event: bola_none_post_event
+Duration: 120 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24
+Completed collection with 24 snapshots.
+Dataset saved to: datasets/master_20250423/bola/none_fault/bola_none_post_event_20250423_214915.jsonl
+Post-event data collected: datasets/master_20250423/bola/none_fault/bola_none_post_event_20250423_214915.jsonl
+Setting fault mode to: none
+Waiting for system to stabilize before next scenario...
+=====================================================
+Processing BOLA under fault condition: stuck
+=====================================================
+Setting fault mode to: stuck
+Collecting baseline data for stuck fault...
+Starting data collection for event: bola_stuck_baseline
+Duration: 120 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24
+Completed collection with 24 snapshots.
+Dataset saved to: datasets/master_20250423/bola/stuck_fault/bola_stuck_baseline_20250423_215155.jsonl
+Baseline data collected: datasets/master_20250423/bola/stuck_fault/bola_stuck_baseline_20250423_215155.jsonl
+Starting data collection for BOLA attack under stuck fault...
+Data collector running with PID 351699
+Executing BOLA attack (accessing premium user data)
+BOLA attack iteration 1/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434442.8601897,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 2/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434458.8903425,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 3/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434474.9093535,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 4/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434489.2980587,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 5/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434505.3267238,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 6/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434514.9818082,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 7/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434530.9993825,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 8/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434547.0349994,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 9/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434563.0593076,"sensor_id":"TEMP004","temperature"...
+Waiting for data collection to complete...
+Starting data collection for event: bola_stuck_attack
+Duration: 180 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36
+Completed collection with 36 snapshots.
+Dataset saved to: datasets/master_20250423/bola/stuck_fault/bola_stuck_attack_20250423_215355.jsonl
+BOLA attack data collected: datasets/master_20250423/bola/stuck_fault/bola_stuck_attack_20250423_215355.jsonl
+Collecting post-event data for stuck fault...
+Starting data collection for event: bola_stuck_post_event
+Duration: 120 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24
+Completed collection with 24 snapshots.
+Dataset saved to: datasets/master_20250423/bola/stuck_fault/bola_stuck_post_event_20250423_215655.jsonl
+Post-event data collected: datasets/master_20250423/bola/stuck_fault/bola_stuck_post_event_20250423_215655.jsonl
+Setting fault mode to: none
+Waiting for system to stabilize before next scenario...
+=====================================================
+Processing BOLA under fault condition: drift
+=====================================================
+Setting fault mode to: drift
+Collecting baseline data for drift fault...
+Starting data collection for event: bola_drift_baseline
+Duration: 120 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24
+Completed collection with 24 snapshots.
+Dataset saved to: datasets/master_20250423/bola/drift_fault/bola_drift_baseline_20250423_215935.jsonl
+Baseline data collected: datasets/master_20250423/bola/drift_fault/bola_drift_baseline_20250423_215935.jsonl
+Starting data collection for BOLA attack under drift fault...
+Data collector running with PID 367372
+Executing BOLA attack (accessing premium user data)
+BOLA attack iteration 1/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434899.7391222,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 2/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434915.773961,"sensor_id":"TEMP004","temperature":...
+BOLA attack iteration 3/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434931.7967367,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 4/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434947.8194225,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 5/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434963.8572493,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 6/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434979.8863704,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 7/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745434994.2530313,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 8/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435010.2837825,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 9/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435019.958155,"sensor_id":"TEMP004","temperature":...
+Waiting for data collection to complete...
+Starting data collection for event: bola_drift_attack
+Duration: 180 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36
+Completed collection with 36 snapshots.
+Dataset saved to: datasets/master_20250423/bola/drift_fault/bola_drift_attack_20250423_220135.jsonl
+BOLA attack data collected: datasets/master_20250423/bola/drift_fault/bola_drift_attack_20250423_220135.jsonl
+Collecting post-event data for drift fault...
+Starting data collection for event: bola_drift_post_event
+Duration: 120 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24
+Completed collection with 24 snapshots.
+Dataset saved to: datasets/master_20250423/bola/drift_fault/bola_drift_post_event_20250423_220436.jsonl
+Post-event data collected: datasets/master_20250423/bola/drift_fault/bola_drift_post_event_20250423_220436.jsonl
+Setting fault mode to: none
+Waiting for system to stabilize before next scenario...
+=====================================================
+Processing BOLA under fault condition: spike
+=====================================================
+Setting fault mode to: spike
+Collecting baseline data for spike fault...
+Starting data collection for event: bola_spike_baseline
+Duration: 120 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24
+Completed collection with 24 snapshots.
+Dataset saved to: datasets/master_20250423/bola/spike_fault/bola_spike_baseline_20250423_220716.jsonl
+Baseline data collected: datasets/master_20250423/bola/spike_fault/bola_spike_baseline_20250423_220716.jsonl
+Starting data collection for BOLA attack under spike fault...
+Data collector running with PID 381725
+Executing BOLA attack (accessing premium user data)
+BOLA attack iteration 1/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435364.6620834,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 2/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435380.7025352,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 3/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435395.0674055,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 4/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435411.0951977,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 5/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435420.7843752,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 6/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435436.805739,"sensor_id":"TEMP004","temperature":...
+BOLA attack iteration 7/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435452.8294961,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 8/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435468.8579273,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 9/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435484.891106,"sensor_id":"TEMP004","temperature":...
+Waiting for data collection to complete...
+Starting data collection for event: bola_spike_attack
+Duration: 180 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36
+Completed collection with 36 snapshots.
+Dataset saved to: datasets/master_20250423/bola/spike_fault/bola_spike_attack_20250423_220916.jsonl
+BOLA attack data collected: datasets/master_20250423/bola/spike_fault/bola_spike_attack_20250423_220916.jsonl
+Collecting post-event data for spike fault...
+Starting data collection for event: bola_spike_post_event
+Duration: 120 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24
+Completed collection with 24 snapshots.
+Dataset saved to: datasets/master_20250423/bola/spike_fault/bola_spike_post_event_20250423_221216.jsonl
+Post-event data collected: datasets/master_20250423/bola/spike_fault/bola_spike_post_event_20250423_221216.jsonl
+Setting fault mode to: none
+Waiting for system to stabilize before next scenario...
+=====================================================
+Processing BOLA under fault condition: dropout
+=====================================================
+Setting fault mode to: dropout
+Collecting baseline data for dropout fault...
+Starting data collection for event: bola_dropout_baseline
+Duration: 120 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24
+Completed collection with 24 snapshots.
+Dataset saved to: datasets/master_20250423/bola/dropout_fault/bola_dropout_baseline_20250423_221456.jsonl
+Baseline data collected: datasets/master_20250423/bola/dropout_fault/bola_dropout_baseline_20250423_221456.jsonl
+Starting data collection for BOLA attack under dropout fault...
+Data collector running with PID 395539
+Executing BOLA attack (accessing premium user data)
+BOLA attack iteration 1/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435819.885055,"sensor_id":"TEMP004","temperature":...
+BOLA attack iteration 2/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435835.912647,"sensor_id":"TEMP004","temperature":...
+BOLA attack iteration 3/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435851.9469206,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 4/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435867.9599898,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 5/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435883.975265,"sensor_id":"TEMP004","temperature":...
+BOLA attack iteration 6/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435899.997677,"sensor_id":"TEMP004","temperature":...
+BOLA attack iteration 7/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435916.028579,"sensor_id":"TEMP004","temperature":...
+BOLA attack iteration 8/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435924.0389576,"sensor_id":"TEMP004","temperature"...
+BOLA attack iteration 9/9
+Response preview: {"TEMP004":{"basic_data":{"gateway_timestamp":1745435940.0624273,"sensor_id":"TEMP004","temperature"...
+Waiting for data collection to complete...
+Starting data collection for event: bola_dropout_attack
+Duration: 180 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36
+Completed collection with 36 snapshots.
+Dataset saved to: datasets/master_20250423/bola/dropout_fault/bola_dropout_attack_20250423_221656.jsonl
+BOLA attack data collected: datasets/master_20250423/bola/dropout_fault/bola_dropout_attack_20250423_221656.jsonl
+Collecting post-event data for dropout fault...
+Starting data collection for event: bola_dropout_post_event
+Duration: 120 seconds, Interval: 5 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24
+Completed collection with 24 snapshots.
+Dataset saved to: datasets/master_20250423/bola/dropout_fault/bola_dropout_post_event_20250423_221956.jsonl
+Post-event data collected: datasets/master_20250423/bola/dropout_fault/bola_dropout_post_event_20250423_221956.jsonl
+Setting fault mode to: none
+Waiting for system to stabilize before next scenario...
+=====================================================
+BOLA dataset collection complete!
+=====================================================
+Master metadata file: datasets/master_20250423/bola/bola_dataset_master_20250423_214409.json
+
+To process this data into CSV format, run:
+python3 bola_dataset_processor.py --metadata datasets/master_20250423/bola/bola_dataset_master_20250423_214409.json

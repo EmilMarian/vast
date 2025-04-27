@@ -1,0 +1,9 @@
+# Web framework and dependencies
+fastapi>=0.68.0
+uvicorn>=0.15.0
+pydantic>=1.8.0
+
+# Middleware
+python-multipart>=0.0.5  # For handling form data
+python-jose>=3.3.0  # For JWT handling
+numpy>=1.21.0

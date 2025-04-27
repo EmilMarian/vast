@@ -1,0 +1,273 @@
+Datasets will be saved to: datasets/master_20250423/ddos
+=====================================================
+Processing DDoS attack under fault condition: none
+=====================================================
+Setting all sensors to fault mode: none
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting all sensors to fault mode: none
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Collecting baseline data before DDoS attack...
+Starting data collection for event: ddos_none_baseline
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/none_fault/ddos_none_baseline_20250423_231038.jsonl
+Baseline data collected: datasets/master_20250423/ddos/none_fault/ddos_none_baseline_20250423_231038.jsonl
+Starting data collection for DDoS attack...
+Data collector running with PID 504525
+Launching DDoS attack from all sensors against 172.28.0.15:8443
+Triggering DDoS attack from localhost:12384 against 172.28.0.15:8443
+DDoS attack response: {
+  "status": "attack initiated", 
+  "target": "172.28.0.15:8443"
+}
+DDoS attack triggered successfully
+All DDoS attacks launched
+Waiting for attack data collection to complete...
+Starting data collection for event: ddos_none_attack
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/none_fault/ddos_none_attack_20250423_231238.jsonl
+Attack data collected: datasets/master_20250423/ddos/none_fault/ddos_none_attack_20250423_231238.jsonl
+Collecting post-attack recovery data...
+Starting data collection for event: ddos_none_recovery
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/none_fault/ddos_none_recovery_20250423_231538.jsonl
+Recovery data collected: datasets/master_20250423/ddos/none_fault/ddos_none_recovery_20250423_231538.jsonl
+Setting all sensors to fault mode: none
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds before next scenario...
+=====================================================
+Processing DDoS attack under fault condition: stuck
+=====================================================
+Setting all sensors to fault mode: none
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting all sensors to fault mode: stuck
+Setting fault mode to: stuck on localhost:12384
+Fault mode set response: {
+  "fault_mode": "stuck", 
+  "status": "success"
+}
+Collecting baseline data before DDoS attack...
+Starting data collection for event: ddos_stuck_baseline
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/stuck_fault/ddos_stuck_baseline_20250423_231959.jsonl
+Baseline data collected: datasets/master_20250423/ddos/stuck_fault/ddos_stuck_baseline_20250423_231959.jsonl
+Starting data collection for DDoS attack...
+Data collector running with PID 521677
+Launching DDoS attack from all sensors against 172.28.0.15:8443
+Triggering DDoS attack from localhost:12384 against 172.28.0.15:8443
+DDoS attack response: {
+  "status": "attack initiated", 
+  "target": "172.28.0.15:8443"
+}
+DDoS attack triggered successfully
+All DDoS attacks launched
+Waiting for attack data collection to complete...
+Starting data collection for event: ddos_stuck_attack
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/stuck_fault/ddos_stuck_attack_20250423_232159.jsonl
+Attack data collected: datasets/master_20250423/ddos/stuck_fault/ddos_stuck_attack_20250423_232159.jsonl
+Collecting post-attack recovery data...
+Starting data collection for event: ddos_stuck_recovery
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/stuck_fault/ddos_stuck_recovery_20250423_232459.jsonl
+Recovery data collected: datasets/master_20250423/ddos/stuck_fault/ddos_stuck_recovery_20250423_232459.jsonl
+Setting all sensors to fault mode: none
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds before next scenario...
+=====================================================
+Processing DDoS attack under fault condition: drift
+=====================================================
+Setting all sensors to fault mode: none
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting all sensors to fault mode: drift
+Setting fault mode to: drift on localhost:12384
+Fault mode set response: {
+  "fault_mode": "drift", 
+  "status": "success"
+}
+Collecting baseline data before DDoS attack...
+Starting data collection for event: ddos_drift_baseline
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/drift_fault/ddos_drift_baseline_20250423_232919.jsonl
+Baseline data collected: datasets/master_20250423/ddos/drift_fault/ddos_drift_baseline_20250423_232919.jsonl
+Starting data collection for DDoS attack...
+Data collector running with PID 539800
+Launching DDoS attack from all sensors against 172.28.0.15:8443
+Triggering DDoS attack from localhost:12384 against 172.28.0.15:8443
+DDoS attack response: {
+  "status": "attack initiated", 
+  "target": "172.28.0.15:8443"
+}
+DDoS attack triggered successfully
+All DDoS attacks launched
+Waiting for attack data collection to complete...
+Starting data collection for event: ddos_drift_attack
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/drift_fault/ddos_drift_attack_20250423_233119.jsonl
+Attack data collected: datasets/master_20250423/ddos/drift_fault/ddos_drift_attack_20250423_233119.jsonl
+Collecting post-attack recovery data...
+Starting data collection for event: ddos_drift_recovery
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/drift_fault/ddos_drift_recovery_20250423_233420.jsonl
+Recovery data collected: datasets/master_20250423/ddos/drift_fault/ddos_drift_recovery_20250423_233420.jsonl
+Setting all sensors to fault mode: none
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds before next scenario...
+=====================================================
+Processing DDoS attack under fault condition: spike
+=====================================================
+Setting all sensors to fault mode: none
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting all sensors to fault mode: spike
+Setting fault mode to: spike on localhost:12384
+Fault mode set response: {
+  "fault_mode": "spike", 
+  "status": "success"
+}
+Collecting baseline data before DDoS attack...
+Starting data collection for event: ddos_spike_baseline
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/spike_fault/ddos_spike_baseline_20250423_233840.jsonl
+Baseline data collected: datasets/master_20250423/ddos/spike_fault/ddos_spike_baseline_20250423_233840.jsonl
+Starting data collection for DDoS attack...
+Data collector running with PID 558581
+Launching DDoS attack from all sensors against 172.28.0.15:8443
+Triggering DDoS attack from localhost:12384 against 172.28.0.15:8443
+DDoS attack response: {
+  "status": "attack initiated", 
+  "target": "172.28.0.15:8443"
+}
+DDoS attack triggered successfully
+All DDoS attacks launched
+Waiting for attack data collection to complete...
+Starting data collection for event: ddos_spike_attack
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/spike_fault/ddos_spike_attack_20250423_234040.jsonl
+Attack data collected: datasets/master_20250423/ddos/spike_fault/ddos_spike_attack_20250423_234040.jsonl
+Collecting post-attack recovery data...
+Starting data collection for event: ddos_spike_recovery
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/spike_fault/ddos_spike_recovery_20250423_234340.jsonl
+Recovery data collected: datasets/master_20250423/ddos/spike_fault/ddos_spike_recovery_20250423_234340.jsonl
+Setting all sensors to fault mode: none
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds before next scenario...
+=====================================================
+Processing DDoS attack under fault condition: dropout
+=====================================================
+Setting all sensors to fault mode: none
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting all sensors to fault mode: dropout
+Setting fault mode to: dropout on localhost:12384
+Fault mode set response: {
+  "fault_mode": "dropout", 
+  "status": "success"
+}
+Collecting baseline data before DDoS attack...
+Starting data collection for event: ddos_dropout_baseline
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/dropout_fault/ddos_dropout_baseline_20250423_234800.jsonl
+Baseline data collected: datasets/master_20250423/ddos/dropout_fault/ddos_dropout_baseline_20250423_234800.jsonl
+Starting data collection for DDoS attack...
+Data collector running with PID 575122
+Launching DDoS attack from all sensors against 172.28.0.15:8443
+Triggering DDoS attack from localhost:12384 against 172.28.0.15:8443
+DDoS attack response: {
+  "status": "attack initiated", 
+  "target": "172.28.0.15:8443"
+}
+DDoS attack triggered successfully
+All DDoS attacks launched
+Waiting for attack data collection to complete...
+Starting data collection for event: ddos_dropout_attack
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/dropout_fault/ddos_dropout_attack_20250423_235001.jsonl
+Attack data collected: datasets/master_20250423/ddos/dropout_fault/ddos_dropout_attack_20250423_235001.jsonl
+Collecting post-attack recovery data...
+Starting data collection for event: ddos_dropout_recovery
+Duration: 180 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90
+Completed collection with 90 snapshots.
+Dataset saved to: datasets/master_20250423/ddos/dropout_fault/ddos_dropout_recovery_20250423_235301.jsonl
+Recovery data collected: datasets/master_20250423/ddos/dropout_fault/ddos_dropout_recovery_20250423_235301.jsonl
+Setting all sensors to fault mode: none
+Setting fault mode to: none on localhost:12384
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds before next scenario...
+=====================================================
+DDoS attack dataset collection complete!
+=====================================================
+Master metadata file: datasets/master_20250423/ddos/ddos_dataset_master_20250423_231023.json
+
+To process this data into CSV format, run:
+python3 ddos_processor.py --metadata datasets/master_20250423/ddos/ddos_dataset_master_20250423_231023.json

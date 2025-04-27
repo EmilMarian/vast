@@ -1,0 +1,45 @@
+{
+  "dataset_type": "ddos_attack_analysis",
+  "created_at": "2025-04-23T13:22:34+03:00",
+  "target_host": "172.28.0.15",
+  "target_port": "8443",
+  "attack_type": "http",
+  "attack_duration": 60,
+  "sensors": [
+    {
+      "host": "localhost",
+      "port": 12384
+    }
+  ],
+  "fault_scenarios": {
+    "none": {
+      "baseline_file": "datasets/master_20250423/ddos/none_fault/ddos_none_baseline_20250423_132249.jsonl",
+      "event_file": "datasets/master_20250423/ddos/none_fault/ddos_none_attack_20250423_132449.jsonl",
+      "recovery_file": "datasets/master_20250423/ddos/none_fault/ddos_none_recovery_20250423_132749.jsonl"
+    }
+  ,
+    "stuck": {
+      "baseline_file": "datasets/master_20250423/ddos/stuck_fault/ddos_stuck_baseline_20250423_133210.jsonl",
+      "event_file": "datasets/master_20250423/ddos/stuck_fault/ddos_stuck_attack_20250423_133410.jsonl",
+      "recovery_file": "datasets/master_20250423/ddos/stuck_fault/ddos_stuck_recovery_20250423_133710.jsonl"
+    }
+  ,
+    "drift": {
+      "baseline_file": "datasets/master_20250423/ddos/drift_fault/ddos_drift_baseline_20250423_134131.jsonl",
+      "event_file": "datasets/master_20250423/ddos/drift_fault/ddos_drift_attack_20250423_134331.jsonl",
+      "recovery_file": "datasets/master_20250423/ddos/drift_fault/ddos_drift_recovery_20250423_134631.jsonl"
+    }
+  ,
+    "spike": {
+      "baseline_file": "datasets/master_20250423/ddos/spike_fault/ddos_spike_baseline_20250423_135051.jsonl",
+      "event_file": "datasets/master_20250423/ddos/spike_fault/ddos_spike_attack_20250423_135252.jsonl",
+      "recovery_file": "datasets/master_20250423/ddos/spike_fault/ddos_spike_recovery_20250423_135552.jsonl"
+    }
+  ,
+    "dropout": {
+      "baseline_file": "datasets/master_20250423/ddos/dropout_fault/ddos_dropout_baseline_20250423_140012.jsonl",
+      "event_file": "datasets/master_20250423/ddos/dropout_fault/ddos_dropout_attack_20250423_140212.jsonl",
+      "recovery_file": "datasets/master_20250423/ddos/dropout_fault/ddos_dropout_recovery_20250423_140512.jsonl"
+    }
+  }
+}

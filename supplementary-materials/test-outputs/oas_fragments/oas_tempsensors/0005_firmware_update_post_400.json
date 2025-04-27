@@ -1,0 +1,32 @@
+{
+  "method": "POST",
+  "parameters": [],
+  "path": "/firmware/update",
+  "requestBody": {
+    "content": {
+      "application/json": {
+        "schema": {
+          "properties": {
+            "firmware_url": {
+              "format": "uri",
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "firmware_url"
+          ],
+          "type": "object"
+        }
+      }
+    },
+    "required": true
+  },
+  "responses": {
+    "400": {
+      "description": "Bad request"
+    }
+  }
+}

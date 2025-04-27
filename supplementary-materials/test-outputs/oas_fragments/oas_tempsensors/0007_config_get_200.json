@@ -1,0 +1,52 @@
+{
+  "method": "GET",
+  "parameters": [],
+  "path": "/config",
+  "requestBody": {},
+  "responses": {
+    "200": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "properties": {
+              "base_temperature": {
+                "format": "float",
+                "type": "number"
+              },
+              "fault_mode": {
+                "enum": [
+                  "none",
+                  "stuck",
+                  "drift",
+                  "spike",
+                  "dropout"
+                ],
+                "type": "string"
+              },
+              "interval": {
+                "type": "string"
+              },
+              "mqtt_interval": {
+                "type": "integer"
+              },
+              "mqtt_topic": {
+                "type": "string"
+              },
+              "sensor_id": {
+                "type": "string"
+              },
+              "type": {
+                "enum": [
+                  "temperature"
+                ],
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "Current sensor configuration"
+    }
+  }
+}

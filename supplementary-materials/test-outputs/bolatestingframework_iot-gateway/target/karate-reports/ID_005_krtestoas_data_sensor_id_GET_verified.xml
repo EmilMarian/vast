@@ -1,0 +1,13 @@
+<testsuite failures="0" name="ID_005_krtestoas_data_sensor_id_GET_verified.feature" skipped="0" tests="1" time="0.087427"><testcase classname="ID_005_krtestoas_data_sensor_id_GET_verified" name="Test sensor data retrieval with different authorization scenarios" time="0.087427"><system-out>* url 'http://192.168.1.109:48080' ........................................ passed
+Given path '/data/TEMP001' ................................................ passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response != null ................................................ passed
+And match response.sensor_id == 'TEMP001' ................................. passed
+And match response.type == 'temperature' .................................. passed
+Given path '/data/NONEXISTENT' ............................................ passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed
+And match response.error == 'Sensor not found' ............................ passed
+</system-out></testcase>
+</testsuite>

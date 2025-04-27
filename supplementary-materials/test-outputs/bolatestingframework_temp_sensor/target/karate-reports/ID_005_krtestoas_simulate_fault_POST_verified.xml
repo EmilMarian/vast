@@ -1,0 +1,28 @@
+<testsuite failures="1" name="ID_005_krtestoas_simulate_fault_POST_verified.feature" skipped="0" tests="1" time="0.097846"><testcase classname="ID_005_krtestoas_simulate_fault_POST_verified" name="Verify that the /simulate/fault endpoint does not allow unauthorized access" time="0.097846"><failure message="js failed:&#10;&gt;&gt;&gt;&gt;&#10;01: username='admin' and password='password'&#10;&lt;&lt;&lt;&lt;&#10;org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:1:17 Expected ; but found and&#13;&#10;username='admin' and password='password'&#13;&#10;                 ^&#10;&#10;- org.graalvm.polyglot.Context.eval(Context.java:425)&#10;- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:169)&#10;- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:165)&#10;- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1286)&#10;- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2238)&#10;- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2157)&#10;- com.intuit.karate.core.ScenarioEngine.request(ScenarioEngine.java:541)&#10;&#10;classpath:ID_005_krtestoas_simulate_fault_POST_verified.feature:4">Given url 'http://192.168.1.109:12384/simulate/fault' ..................... passed
+And request username='admin' and password='password' ...................... failed
+
+Stack Trace:
+com.intuit.karate.KarateException: js failed:
+&gt;&gt;&gt;&gt;
+01: username='admin' and password='password'
+&lt;&lt;&lt;&lt;
+org.graalvm.polyglot.PolyglotException: SyntaxError: Unnamed:1:17 Expected ; but found and&#13;
+username='admin' and password='password'&#13;
+                 ^
+
+- org.graalvm.polyglot.Context.eval(Context.java:425)
+- com.intuit.karate.graal.JsEngine.evalForValue(JsEngine.java:169)
+- com.intuit.karate.graal.JsEngine.eval(JsEngine.java:165)
+- com.intuit.karate.core.ScenarioEngine.evalJs(ScenarioEngine.java:1286)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2238)
+- com.intuit.karate.core.ScenarioEngine.evalKarateExpression(ScenarioEngine.java:2157)
+- com.intuit.karate.core.ScenarioEngine.request(ScenarioEngine.java:541)
+
+classpath:ID_005_krtestoas_simulate_fault_POST_verified.feature:4&#13;
+	at &lt;feature&gt;.: And request username='admin' and password='password' (classpath:ID_005_krtestoas_simulate_fault_POST_verified.feature:4:4)&#13;
+
+When method post .......................................................... skipped
+Then status 401 ........................................................... skipped
+And match response contains 'Unauthorized' ................................ skipped
+</failure></testcase>
+</testsuite>

@@ -1,0 +1,32 @@
+{
+  "method": "POST",
+  "parameters": [],
+  "path": "/mqtt/reconnect",
+  "requestBody": {},
+  "responses": {
+    "200": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "properties": {
+              "message": {
+                "example": "MQTT reconnection initiated",
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "success",
+                  "error"
+                ],
+                "example": "success",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "Successful reconnection initiated"
+    }
+  }
+}

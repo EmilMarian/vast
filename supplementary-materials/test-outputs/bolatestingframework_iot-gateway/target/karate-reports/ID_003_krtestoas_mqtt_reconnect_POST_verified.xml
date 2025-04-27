@@ -1,0 +1,14 @@
+<testsuite failures="0" name="ID_003_krtestoas_mqtt_reconnect_POST_verified.feature" skipped="0" tests="1" time="0.089967"><testcase classname="ID_003_krtestoas_mqtt_reconnect_POST_verified" name="Test health check and reconnection APIs" time="0.089967"><system-out>* url 'http://192.168.1.109:48080' ........................................ passed
+Given path '/health' ...................................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response.status == 'healthy' .................................... passed
+And match response.mqtt_broker == '#notnull' .............................. passed
+And match response.mqtt_connection == '#regex connected|disconnected' ..... passed
+Given path '/mqtt/reconnect' .............................................. passed
+When method post .......................................................... passed
+Then status 200 ........................................................... passed
+And match response.status == 'success' .................................... passed
+And match response.message == 'MQTT reconnection initiated' ............... passed
+</system-out></testcase>
+</testsuite>

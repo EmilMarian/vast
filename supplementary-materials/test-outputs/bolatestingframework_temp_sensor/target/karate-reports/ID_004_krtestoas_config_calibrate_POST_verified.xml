@@ -1,0 +1,56 @@
+<testsuite failures="2" name="ID_004_krtestoas_config_calibrate_POST_verified.feature" skipped="0" tests="3" time="0.049146"><testcase classname="ID_004_krtestoas_config_calibrate_POST_verified" name="Attempt sensor calibration without authentication" time="0.037942"><system-out>* url 'http://192.168.1.109:12384' ........................................ passed
+* def validAuth = {username: 'admin', password: 'admin'} .................. passed
+* def invalidAuth = {username: 'user', password: 'wrongpass'} ............. passed
+Given path '/config/calibrate' ............................................ passed
+And request { "calibration_offset": 1.5 } ................................. passed
+When method post .......................................................... passed
+Then status 401 ........................................................... passed
+And match response.error == 'Unauthorized' ................................ passed
+</system-out></testcase>
+<testcase classname="ID_004_krtestoas_config_calibrate_POST_verified" name="Attempt sensor calibration with invalid credentials" time="0.006964"><failure message="not a callable feature or js function: [type: MAP, value: {username=user, password=wrongpass}]&#10;classpath:ID_004_krtestoas_config_calibrate_POST_verified.feature:19">* url 'http://192.168.1.109:12384' ........................................ passed
+* def validAuth = {username: 'admin', password: 'admin'} .................. passed
+* def invalidAuth = {username: 'user', password: 'wrongpass'} ............. passed
+Given path '/config/calibrate' ............................................ passed
+And request { "calibration_offset": 1.5 } ................................. passed
+And header Authorization = call invalidAuth ............................... failed
+
+Stack Trace:
+com.intuit.karate.KarateException: not a callable feature or js function: [type: MAP, value: {username=user, password=wrongpass}]
+classpath:ID_004_krtestoas_config_calibrate_POST_verified.feature:19&#13;
+	at &lt;feature&gt;.: And header Authorization = call invalidAuth (classpath:ID_004_krtestoas_config_calibrate_POST_verified.feature:19:19)&#13;
+
+When method post .......................................................... skipped
+Then status 401 ........................................................... skipped
+And match response.error == 'Unauthorized' ................................ skipped
+</failure></testcase>
+<testcase classname="ID_004_krtestoas_config_calibrate_POST_verified" name="Successful sensor calibration with valid credentials" time="0.004241"><failure message="not a callable feature or js function: [type: MAP, value: {username=admin, password=admin}]&#10;classpath:ID_004_krtestoas_config_calibrate_POST_verified.feature:27">* url 'http://192.168.1.109:12384' ........................................ passed
+* def validAuth = {username: 'admin', password: 'admin'} .................. passed
+* def invalidAuth = {username: 'user', password: 'wrongpass'} ............. passed
+Given path '/config' ...................................................... passed
+And header Authorization = call validAuth ................................. failed
+
+Stack Trace:
+com.intuit.karate.KarateException: not a callable feature or js function: [type: MAP, value: {username=admin, password=admin}]
+classpath:ID_004_krtestoas_config_calibrate_POST_verified.feature:27&#13;
+	at &lt;feature&gt;.: And header Authorization = call validAuth (classpath:ID_004_krtestoas_config_calibrate_POST_verified.feature:27:27)&#13;
+
+When method get ........................................................... skipped
+Then status 200 ........................................................... skipped
+And match response.sensor_id == 'TEMP004' ................................. skipped
+Given path '/config/calibrate' ............................................ skipped
+And request { "calibration_offset": 1.5 } ................................. skipped
+And header Authorization = call validAuth ................................. skipped
+When method post .......................................................... skipped
+Then status 200 ........................................................... skipped
+And match response.status == 'success' .................................... skipped
+And match response.calibration_offset == 1.5 .............................. skipped
+And match response.calibrated_reading != null ............................. skipped
+Given path '/config/calibrate' ............................................ skipped
+And request { "calibration_offset": 0.0 } ................................. skipped
+And header Authorization = call validAuth ................................. skipped
+When method post .......................................................... skipped
+Then status 200 ........................................................... skipped
+And match response.status == 'success' .................................... skipped
+And match response.calibration_offset == 0.0 .............................. skipped
+</failure></testcase>
+</testsuite>

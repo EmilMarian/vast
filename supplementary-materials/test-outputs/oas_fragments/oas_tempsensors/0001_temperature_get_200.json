@@ -1,0 +1,36 @@
+{
+  "method": "GET",
+  "parameters": [],
+  "path": "/temperature",
+  "requestBody": {},
+  "responses": {
+    "200": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "properties": {
+              "temperature": {
+                "description": "Current temperature reading in Celsius",
+                "format": "float",
+                "type": "number"
+              },
+              "timestamp": {
+                "description": "Unix timestamp of the reading",
+                "format": "double",
+                "type": "number"
+              },
+              "unit": {
+                "enum": [
+                  "celsius"
+                ],
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "Current temperature reading"
+    }
+  }
+}

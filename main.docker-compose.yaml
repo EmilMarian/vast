@@ -1,0 +1,215 @@
+version: '3'
+
+services:
+  # Data Server - Provides simulated environmental data
+  data-server:
+    image: data-server:1.1.2
+    build:
+      context: ./data-server
+    container_name: data-server
+    restart: on-failure
+    ports:
+      - "8800:8800"
+    environment:
+      - DATA_PORT=8800
+      - DATA_UPDATE_INTERVAL=5
+      - DATA_HISTORY_SIZE=1000
+      - API_KEY=INSECURE_API_KEY
+      - SENSOR_CONFIG_PATH=/data/sensors.json
+    volumes:
+      - ./data:/data
+    networks:
+      - sensor-net
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8800/"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+
+  # MQTT Broker - Message queue for sensor data
+  mosquitto:
+    image: mosquitto:iot-vulnerable-mqtt
+    container_name: mqtt-broker
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - /mosquitto/config/config.conf:/mosquitto/config.conf
+      - /mosquitto/data:/mosquitto/data
+      - /mosquitto/log:/mosquitto/log
+    restart: always
+    healthcheck:
+      test: ["CMD", "mosquitto_sub", "-h", "localhost", "-p", "1883", "-t", "$$SYS/#", "-C", "1", "-i", "healthcheck", "-W", "3"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+      start_period: 5s
+    networks:
+      - sensor-net
+
+  # Temperature Sensor 1 - Binary format
+  temperature-sensor-01:
+    image: iot-temperature-sensor:1.5.1
+    build:
+      context: ./sensors/temp
+    container_name: temperature-sensor-01
+    restart: on-failure
+    ports:
+      - "12381:12380"
+    depends_on:
+      mosquitto:
+        condition: service_healthy
+    environment:
+      - MQTT_BROKER=mosquitto
+      - MQTT_PORT=1883
+      - MQTT_TOPIC=sensors/temperature
+      - MQTT_PUBLISH_INTERVAL=5
+      - SENSOR_ID=TEMP001
+      - FIRMWARE_PATH=/tmp/firmware
+      - UPDATE_SERVER=http://firmware-server.local
+      - SENSOR_FORMAT=binary
+      - DATA_SERVER_URL=http://data-server:8800
+      - DATA_FETCH_INTERVAL=5
+      - FALLBACK_TEMP=25.0
+      - MAX_CONNECTION_FAILURES=5
+    networks:
+      - sensor-net
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'   # Limit to 2% of a single CPU core
+          memory: 50M   # Limit to 50MB of RAM
+
+  # Temperature Sensor 2 - CSV format
+  temperature-sensor-02:
+    image: iot-temperature-sensor:1.5.1
+    build:
+      context: ./sensors/temp
+    container_name: temperature-sensor-02
+    restart: on-failure
+    ports:
+      - "12382:12380"
+    depends_on:
+      mosquitto:
+        condition: service_healthy
+    environment:
+      - MQTT_BROKER=mosquitto
+      - MQTT_PORT=1883
+      - MQTT_TOPIC=sensors/temperature
+      - MQTT_PUBLISH_INTERVAL=14
+      - SENSOR_ID=TEMP002
+      - FIRMWARE_PATH=/tmp/firmware
+      - UPDATE_SERVER=http://firmware-server.local
+      - SENSOR_FORMAT=csv
+      - DATA_SERVER_URL=http://data-server:8800
+      - DATA_FETCH_INTERVAL=14
+      - FALLBACK_TEMP=25.0
+      - MAX_CONNECTION_FAILURES=5
+    networks:
+      - sensor-net
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'   # Limit to 2% of a single CPU core
+          memory: 50M   # Limit to 50MB of RAM
+
+  # Temperature Sensor 3 - Minimal format
+  temperature-sensor-03:
+    image: iot-temperature-sensor:1.5.1
+    build:
+      context: ./sensors/temp
+    container_name: temperature-sensor-03
+    restart: on-failure
+    ports:
+      - "12383:12380"
+    depends_on:
+      mosquitto:
+        condition: service_healthy
+    environment:
+      - MQTT_BROKER=mosquitto
+      - MQTT_PORT=1883
+      - MQTT_TOPIC=sensors/temperature
+      - MQTT_PUBLISH_INTERVAL=12
+      - SENSOR_ID=TEMP003
+      - FIRMWARE_PATH=/tmp/firmware
+      - UPDATE_SERVER=http://firmware-server.local
+      - SENSOR_FORMAT=minimal
+      - DATA_SERVER_URL=http://data-server:8800
+      - DATA_FETCH_INTERVAL=12
+      - FALLBACK_TEMP=25.0
+      - MAX_CONNECTION_FAILURES=5
+    networks:
+      - sensor-net
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'   # Limit to 2% of a single CPU core
+          memory: 50M   # Limit to 50MB of RAM
+
+  # Temperature Sensor 4 - Rich JSON format
+  temperature-sensor-04:
+    image: iot-temperature-sensor:1.5.1
+    build:
+      context: ./sensors/temp
+    container_name: temperature-sensor-04
+    restart: on-failure
+    ports:
+      - "12384:12380"
+    depends_on:
+      mosquitto:
+        condition: service_healthy
+    environment:
+      - MQTT_BROKER=mosquitto
+      - MQTT_PORT=1883
+      - MQTT_TOPIC=sensors/temperature
+      - MQTT_PUBLISH_INTERVAL=8
+      - SENSOR_ID=TEMP004
+      - FIRMWARE_PATH=/tmp/firmware
+      - UPDATE_SERVER=http://firmware-server.local
+      - SENSOR_FORMAT=rich_json
+      - DATA_SERVER_URL=http://data-server:8800
+      - DATA_FETCH_INTERVAL=8
+      - FALLBACK_TEMP=25.0
+      - MAX_CONNECTION_FAILURES=5
+    networks:
+      - sensor-net
+        # resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'   # Limit to 2% of a single CPU core
+          memory: 50M   # Limit to 50MB of RAM
+
+  # IoT Gateway - Receives and processes sensor data
+  iot-gateway:
+    image: iot-gateway:1.1.0
+    build: 
+      context: ./iot-gateway
+    container_name: iot-gateway
+    restart: on-failure
+    environment:
+      - MQTT_BROKER=mosquitto
+      - MQTT_PORT=1883
+      - MQTT_TOPIC=sensors/temperature
+      - HTTP_PORT=48080
+      - MAX_CONNECTION_ATTEMPTS=20
+      - CONNECTION_RETRY_DELAY=15
+    ports:
+      - "48080:48080"
+    depends_on:
+      mosquitto:
+        condition: service_healthy
+    networks:
+      - sensor-net
+    # resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'   # Limit to 5% of a single CPU core
+          memory: 300M   # Limit to 300MB of RAM
+
+# Network configuration
+networks:
+  sensor-net:
+    driver: bridge

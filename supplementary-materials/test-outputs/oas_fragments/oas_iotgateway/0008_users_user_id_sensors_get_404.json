@@ -1,0 +1,35 @@
+{
+  "method": "GET",
+  "parameters": [
+    {
+      "description": "ID of the user to retrieve sensor data for",
+      "example": "user1",
+      "in": "path",
+      "name": "user_id",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "path": "/users/{user_id}/sensors",
+  "requestBody": {},
+  "responses": {
+    "404": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "properties": {
+              "error": {
+                "example": "User user1 not found",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "User not found"
+    }
+  }
+}

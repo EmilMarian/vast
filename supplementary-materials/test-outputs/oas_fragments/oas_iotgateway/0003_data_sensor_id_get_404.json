@@ -1,0 +1,35 @@
+{
+  "method": "GET",
+  "parameters": [
+    {
+      "description": "ID of the sensor to retrieve data from (e.g., TEMP001)",
+      "example": "TEMP001",
+      "in": "path",
+      "name": "sensor_id",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "path": "/data/{sensor_id}",
+  "requestBody": {},
+  "responses": {
+    "404": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "properties": {
+              "error": {
+                "example": "Sensor not found",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "Sensor not found"
+    }
+  }
+}

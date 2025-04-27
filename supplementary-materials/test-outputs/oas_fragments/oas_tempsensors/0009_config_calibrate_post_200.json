@@ -1,0 +1,44 @@
+{
+  "method": "POST",
+  "parameters": [],
+  "path": "/config/calibrate",
+  "requestBody": {
+    "content": {
+      "application/json": {
+        "schema": {
+          "properties": {
+            "base_temperature": {
+              "format": "float",
+              "type": "number"
+            }
+          },
+          "required": [
+            "base_temperature"
+          ],
+          "type": "object"
+        }
+      }
+    },
+    "required": true
+  },
+  "responses": {
+    "200": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "properties": {
+              "new_base_temperature": {
+                "type": "number"
+              },
+              "status": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "Calibration successful"
+    }
+  }
+}

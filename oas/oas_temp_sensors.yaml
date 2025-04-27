@@ -1,0 +1,287 @@
+openapi: 3.0.0
+info:
+  title: Temperature Sensor API
+  version: 1.5.0
+  description: API for managing temperature sensors, including firmware updates, configuration, and sensor readings
+
+servers:
+  - url: http://localhost:12381
+    description: Local development server
+  - url: http://192.168.0.104:12381
+    description: Temp Sensor 1
+  - url: http://192.168.0.104:12382
+    description: Temp Sensor 2
+  - url: http://192.168.0.104:12383
+    description: Temp Sensor 3
+  - url: http://192.168.0.104:12383
+    description: Temp Sensor 4
+  - url: http://{ip}:12381
+    description: Local network access
+    variables:
+      ip:
+        default: "192.168.0.x"
+        description: "Your machine's local IP address"
+
+components:
+  securitySchemes:
+    basicAuth:
+      type: http
+      scheme: basic
+
+  schemas:
+    TemperatureReading:
+      type: object
+      properties:
+        temperature:
+          type: number
+          format: float
+          description: Current temperature reading in Celsius
+        unit:
+          type: string
+          enum: [celsius]
+        timestamp:
+          type: number
+          format: double
+          description: Unix timestamp of the reading
+
+    FirmwareVersion:
+      type: object
+      properties:
+        version:
+          type: string
+          description: Current firmware version
+        sensor_id:
+          type: string
+          description: Unique identifier of the sensor
+
+    SensorConfig:
+      type: object
+      properties:
+        sensor_id:
+          type: string
+        type:
+          type: string
+          enum: [temperature]
+        interval:
+          type: string
+        base_temperature:
+          type: number
+          format: float
+        mqtt_topic:
+          type: string
+        mqtt_interval:
+          type: integer
+        fault_mode:
+          type: string
+          enum: [none, stuck, drift, spike, dropout]
+
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+        data_server_connection:
+          type: object
+          properties:
+            connected:
+              type: boolean
+            registered:
+              type: boolean
+            connection_failures:
+              type: integer
+            last_fetch_time:
+              type: number
+              nullable: true
+            server_url:
+              type: string
+        mqtt_broker:
+          type: string
+        mqtt_topic:
+          type: string
+        sensor_id:
+          type: string
+        fault_mode:
+          type: string
+
+paths:
+  /temperature:
+    get:
+      summary: Get current temperature reading
+      description: Retrieve the current temperature reading from the sensor
+      responses:
+        '200':
+          description: Current temperature reading
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TemperatureReading'
+
+  /firmware/version:
+    get:
+      summary: Get firmware version
+      description: Retrieve the current firmware version of the sensor
+      responses:
+        '200':
+          description: Current firmware version
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FirmwareVersion'
+
+  /firmware/update:
+    post:
+      summary: Update sensor firmware
+      description: Update the sensor firmware (requires authentication)
+      security:
+        - basicAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - firmware_url
+              properties:
+                firmware_url:
+                  type: string
+                  format: uri
+                version:
+                  type: string
+      responses:
+        '200':
+          description: Firmware update successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  new_version:
+                    type: string
+        '401':
+          description: Unauthorized
+        '400':
+          description: Bad request
+        '500':
+          description: Internal server error
+
+  /config:
+    get:
+      summary: Get sensor configuration
+      description: Retrieve the current sensor configuration (requires authentication)
+      security:
+        - basicAuth: []
+      responses:
+        '200':
+          description: Current sensor configuration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SensorConfig'
+        '401':
+          description: Unauthorized
+
+  /config/calibrate:
+    post:
+      summary: Calibrate sensor
+      description: Update the base temperature for calibration (requires authentication)
+      security:
+        - basicAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - base_temperature
+              properties:
+                base_temperature:
+                  type: number
+                  format: float
+      responses:
+        '200':
+          description: Calibration successful
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  new_base_temperature:
+                    type: number
+        '401':
+          description: Unauthorized
+        '400':
+          description: Bad request
+
+  /simulate/fault:
+    post:
+      summary: Simulate sensor fault
+      description: Set a fault simulation mode for the sensor (requires authentication)
+      security:
+        - basicAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - fault_mode
+              properties:
+                fault_mode:
+                  type: string
+                  enum: [none, stuck, drift, spike, dropout]
+      responses:
+        '200':
+          description: Fault mode set successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  fault_mode:
+                    type: string
+        '401':
+          description: Unauthorized
+        '400':
+          description: Bad request
+
+  /simulate/status:
+    get:
+      summary: Get fault status
+      description: Retrieve the current fault simulation status
+      responses:
+        '200':
+          description: Current fault status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  fault_mode:
+                    type: string
+                    enum: [none, stuck, drift, spike, dropout]
+                  base_temperature:
+                    type: number
+                    format: float
+
+  /health:
+    get:
+      summary: Health check
+      description: Check the health status of the sensor and its connections
+      responses:
+        '200':
+          description: Health status information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthStatus'

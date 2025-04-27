@@ -43,10 +43,6 @@ VAST (Vulnerable Agricultural Sensor Testbed) is a containerized, vulnerable-by-
    docker-compose -f observability/docker-compose.yaml up -d
    ```
 
-4. Verify installation:
-   ```bash
-   ./scripts/check-installation.sh
-   ```
 
 ## Usage Examples
 
@@ -63,7 +59,7 @@ curl http://localhost:48080/data/TEMP001
 #### BOLA Vulnerability Example
 
 ```bash
-curl http://localhost:48080/users/premium_user/sensors
+curl -u admin:admin http://localhost:48080/users/premium_user/sensors
 ```
 
 #### Command Injection Example
@@ -105,23 +101,26 @@ VAST implements a multi-layered architecture mimicking real-world agricultural I
 
 ## Documentation
 
-Comprehensive documentation is available in the `docs` directory:
+Comprehensive documentation is available throughout the repository:
 
-- [Installation Guide](docs/installation.md)
-- [Architecture Overview](docs/architecture.md)
-- [Vulnerability Details](docs/vulnerabilities.md)
-- [Educational Use Cases](docs/education.md)
-- [Dataset Generation](docs/datasets.md)
-- [API References](docs/api.md)
+- **Installation**: See the [Getting Started](#getting-started) section above for installation instructions
+- [Architecture Overview](supplementary-materials/README.md#relationship-to-main-paper)
+- **Vulnerabilities**:
+  - [BOLA Vulnerability](supplementary-materials/vulnerability-details/bola-vulnerability.md)
+  - [Command Injection Vulnerability](supplementary-materials/vulnerability-details/command-injection-vulnerability.md)
+  - [DDoS Vulnerability](supplementary-materials/vulnerability-details/ddos-vulnerability.md)
+  - [Resource Exhaustion Vulnerability](supplementary-materials/vulnerability-details/resource-exhaustion-vulnerability.md)
+- [Dataset Generation](supplementary-materials/sensor-faults-simulation.md)
 
-## Demonstration Screenshots and Artifacts
 
-Explore our demonstration artifacts in the `artifacts` directory:
+## Technical Methodology
 
-- [DDoS Attack Demonstration](artifacts/ddos-demo/README.md)
-- [Firmware Exploitation](artifacts/firmware-exploitation/README.md)
-- [Resource Exhaustion Attack](artifacts/resource-exhaustion/README.md)
-- [Sensor Fault Patterns](artifacts/fault-patterns/README.md)
+Details on our technical implementation and analytical methods:
+
+- [Sensor Fault Simulation](supplementary-materials/sensor-faults-simulation.md)
+- [Detectability Score Calculation](supplementary-materials/detectability-calculation.md)
+- [Fault Masking Methodology](supplementary-materials/fault-masking-methodology.md)
+- [Wireshark Analysis of Attacks](supplementary-materials/analysis/wireshark-analysis.md)
 
 ## Contributing
 
@@ -133,7 +132,7 @@ VAST contains deliberately vulnerable components designed for educational purpos
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
 
 ## Citation
 
@@ -142,6 +141,22 @@ If you use VAST in your research, please cite our paper:
 ```
 Pasca, E.M.; Delinschi, D.; Erdei, R.; Baraian, I.; Matei, O. A Vulnerable-by-Design IoT Sensor Framework for Cybersecurity in Smart Agriculture. Agriculture 2025, X, X. https://doi.org/10.3390/xxxxx
 ```
+
+## Ethical Considerations and Security Disclosure
+
+**Important Notice**: This repository contains deliberately vulnerable code, attack implementations, and exploitation techniques designed for **educational and research purposes only**.
+
+- **Potential for Harm**: The vulnerabilities demonstrated in this framework (BOLA, command injection, DDoS, resource exhaustion) can cause significant damage if deployed against production systems. Never deploy this code in production environments or use these techniques against systems without explicit permission.
+
+- **Controlled Environment Use**: All testing, experimentation, and educational activities should be conducted in isolated environments completely disconnected from production networks or the internet.
+
+- **Legal Implications**: Using these attack techniques against systems without proper authorization may violate computer crime laws in many jurisdictions, including but not limited to the Computer Fraud and Abuse Act (US), the Computer Misuse Act (UK), and similar legislation worldwide.
+
+- **Responsible Disclosure**: Some implementation details have been modified or abstracted to prevent direct weaponization while maintaining educational value. However, the core concepts remain valid for understanding security vulnerabilities.
+
+- **Academic and Educational Context**: This framework was developed to address the significant gap in agricultural IoT security education and research. Its purpose is to improve security awareness and defensive capabilities in this critical infrastructure sector.
+
+By using this repository, you acknowledge these considerations and agree to use the knowledge and tools responsibly. The authors and contributors assume no liability for misuse of this software or the techniques it demonstrates.
 
 ## Acknowledgments
 

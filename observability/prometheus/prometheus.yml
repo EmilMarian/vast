@@ -1,0 +1,55 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  - job_name: 'node-exporter'
+    static_configs:
+      - targets: ['node-exporter:9100']
+
+  - job_name: 'cadvisor'
+    static_configs:
+      - targets: ['cadvisor:8080']
+
+  - job_name: 'iot-gateway'
+    metrics_path: '/metrics'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['iot-gateway:48080']
+        labels:
+          group: 'gateway'
+    
+  - job_name: 'data-server'
+    metrics_path: '/metrics'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['data-server:8800']
+        labels:
+          group: 'data-services'
+
+  # Additional endpoints for data collection (HTTP REST APIs)
+  - job_name: 'gateway-api-scraper'
+    metrics_path: '/scrape'
+    scrape_interval: 5s
+    static_configs:
+      - targets: ['sensor-metrics:8000']
+        labels:
+          group: 'gateway-data'
+
+  - job_name: 'sensor-metrics'
+    static_configs:
+      - targets: ['sensor-metrics:8007']
+        labels:
+          group: 'sensors'
+
+  - job_name: 'temperature-sensors'
+    scrape_interval: 2s
+    metrics_path: '/health/metrics'
+    static_configs:
+      - targets: ['temperature-sensor-01:12380', 'temperature-sensor-02:12380', 'temperature-sensor-03:12380', 'temperature-sensor-04:12380']
+        labels:
+          group: 'sensors'

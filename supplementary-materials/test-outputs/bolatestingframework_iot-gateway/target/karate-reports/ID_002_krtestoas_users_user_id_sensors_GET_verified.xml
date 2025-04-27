@@ -1,0 +1,17 @@
+<testsuite failures="1" name="ID_002_krtestoas_users_user_id_sensors_GET_verified.feature" skipped="0" tests="1" time="0.078141"><testcase classname="ID_002_krtestoas_users_user_id_sensors_GET_verified" name="Detect and prevent unauthorized access through User ID enumeration" time="0.078141"><failure message="status code was: 404, expected: 403, response time in milliseconds: 15, url: http://192.168.1.109:48080/users/%7Buser_id%7D/sensors?user_id=user123, response: &#10;{&quot;error&quot;:&quot;User {user_id} not found&quot;}&#10;&#10;classpath:ID_002_krtestoas_users_user_id_sensors_GET_verified.feature:10">* url 'http://192.168.1.109:48080' ........................................ passed
+Given path '/users/{user_id}/sensors' ..................................... passed
+And param user_id = 'user123' ............................................. passed
+And header Authorization = 'Bearer &lt;user_token&gt;' .......................... passed
+When method get ........................................................... passed
+Then status 403 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.KarateException: status code was: 404, expected: 403, response time in milliseconds: 15, url: http://192.168.1.109:48080/users/%7Buser_id%7D/sensors?user_id=user123, response: 
+{"error":"User {user_id} not found"}
+
+classpath:ID_002_krtestoas_users_user_id_sensors_GET_verified.feature:10&#13;
+	at &lt;feature&gt;.: Then status 403 (classpath:ID_002_krtestoas_users_user_id_sensors_GET_verified.feature:10:10)&#13;
+
+And match response contains 'Unauthorized access attempt detected.' ....... skipped
+</failure></testcase>
+</testsuite>

@@ -1,0 +1,387 @@
+openapi: 3.0.3
+info:
+  title: Agricultural IoT Data Server
+  description: A vulnerable-by-design data server for agricultural IoT sensor testing
+  version: 1.0.0
+
+servers:
+  - url: http://localhost:8000
+    description: Local development server
+  - url: http://{ip}:8000
+    description: Local network access
+    variables:
+      ip:
+        default: "192.168.1.x"
+        description: "Your machine's local IP address"
+
+components:
+  securitySchemes:
+    ApiKeyHeader:
+      type: apiKey
+      in: header
+      name: X-API-Key
+
+  schemas:
+    SensorReading:
+      type: object
+      properties:
+        value: 
+          type: number
+          format: float
+        unit: 
+          type: string
+        timestamp:
+          type: number
+          format: float
+
+    SensorContext:
+      type: object
+      properties:
+        environment:
+          type: string
+        location:
+          type: string
+        metadata:
+          type: object
+          additionalProperties: true
+
+    EnrichedReading:
+      type: object
+      properties:
+        reading:
+          $ref: '#/components/schemas/SensorReading'
+        context:
+          $ref: '#/components/schemas/SensorContext'
+
+    ServerInfo:
+      type: object
+      properties:
+        name:
+          type: string
+        version:
+          type: string
+        status:
+          type: string
+        sensors:
+          type: array
+          items:
+            type: string
+        uptime_seconds:
+          type: number
+          format: float
+
+    EnvironmentalData:
+      type: object
+      properties:
+        temperature:
+          type: number
+          format: float
+        unit:
+          type: string
+        timestamp:
+          type: number
+          format: float
+        location:
+          type: string
+        environment:
+          type: string
+        is_dummy:
+          type: boolean
+        is_active:
+          type: boolean
+
+    VulnerabilityConfig:
+      type: object
+      properties:
+        data_vulnerability:
+          type: string
+        request_vulnerability:
+          type: string
+        auth_bypass:
+          type: boolean
+          
+    SensorRegistration:
+      type: object
+      properties:
+        sensor_id:
+          type: string
+        type:
+          type: string
+        location:
+          type: string
+          default: "unknown"
+        environment:
+          type: string
+          default: "greenhouse"
+        metadata:
+          type: object
+          additionalProperties: true
+      required:
+        - sensor_id
+        - type
+        
+    Heartbeat:
+      type: object
+      properties:
+        timestamp:
+          type: number
+          format: float
+      required:
+        - timestamp
+        
+    SensorStatus:
+      type: object
+      properties:
+        active_sensors:
+          type: array
+          items:
+            type: string
+        inactive_sensors:
+          type: array
+          items:
+            type: string
+        total_sensors:
+          type: integer
+        heartbeat_timeout_seconds:
+          type: integer
+
+paths:
+  /:
+    get:
+      summary: Root endpoint with basic server info
+      responses:
+        '200':
+          description: Basic server information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ServerInfo'
+
+  /sensors/{sensor_id}/current:
+    get:
+      summary: Get the latest reading for a specific sensor
+      security:
+        - ApiKeyHeader: []
+      parameters:
+        - name: sensor_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Latest sensor reading
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EnrichedReading'
+        '401':
+          description: Invalid or missing API key
+        '404':
+          description: Sensor not found
+
+  /environment/{sensor_id}:
+    get:
+      summary: Get environmental data for a specific sensor
+      parameters:
+        - name: sensor_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Environmental data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EnvironmentalData'
+
+  /sensors/{sensor_id}/history:
+    get:
+      summary: Get historical readings for a specific sensor
+      security:
+        - ApiKeyHeader: []
+      parameters:
+        - name: sensor_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            default: 100
+      responses:
+        '200':
+          description: Historical sensor readings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/EnrichedReading'
+        '401':
+          description: Invalid or missing API key
+        '404':
+          description: No history found for sensor
+
+  /sensors:
+    get:
+      summary: Get all available sensor IDs
+      security:
+        - ApiKeyHeader: []
+      responses:
+        '200':
+          description: List of sensor IDs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: string
+        '401':
+          description: Invalid or missing API key
+
+  /sensors/register:
+    post:
+      summary: Register a sensor with the server
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SensorRegistration'
+      responses:
+        '200':
+          description: Registration response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+                  sensor_id:
+                    type: string
+
+  /sensors/heartbeat/{sensor_id}:
+    post:
+      summary: Record a heartbeat from a sensor
+      parameters:
+        - name: sensor_id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Heartbeat'
+      responses:
+        '200':
+          description: Heartbeat response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  sensor_id:
+                    type: string
+                  message:
+                    type: string
+
+  /sensors/status:
+    get:
+      summary: Get status of all sensors including active/inactive and heartbeat status
+      security:
+        - ApiKeyHeader: []
+      responses:
+        '200':
+          description: Sensor status information
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SensorStatus'
+        '401':
+          description: Invalid or missing API key
+
+  /user/{user_id}/sensors:
+    get:
+      summary: Get sensors for a specific user (VULNERABLE - BOLA)
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: User's sensors and their readings
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/EnrichedReading'
+        '404':
+          description: User not found
+
+  /admin/vulnerabilities:
+    post:
+      summary: Configure active vulnerabilities (admin only)
+      security:
+        - ApiKeyHeader: []
+      parameters:
+        - name: data_vuln
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: request_vuln
+          in: query
+          required: false
+          schema:
+            type: string
+        - name: auth_bypass
+          in: query
+          required: false
+          schema:
+            type: boolean
+      responses:
+        '200':
+          description: Current vulnerability configuration
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VulnerabilityConfig'
+        '401':
+          description: Invalid or missing API key
+
+  /admin/regenerate:
+    post:
+      summary: Force regeneration of all sensor data
+      security:
+        - ApiKeyHeader: []
+      responses:
+        '200':
+          description: Data regeneration status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                  message:
+                    type: string
+        '401':
+          description: Invalid or missing API key

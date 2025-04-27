@@ -1,0 +1,40 @@
+{
+  "method": "GET",
+  "parameters": [
+    {
+      "description": "ID of the user to retrieve sensor data for",
+      "example": "user1",
+      "in": "path",
+      "name": "user_id",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "path": "/users/{user_id}/sensors",
+  "requestBody": {},
+  "responses": {
+    "200": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "additionalProperties": {
+              "properties": {
+                "basic_data": {
+                  "$ref": "#/components/schemas/SensorData"
+                },
+                "sensitive_data": {
+                  "$ref": "#/components/schemas/SensitiveData"
+                }
+              },
+              "type": "object"
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "Successful response"
+    }
+  }
+}

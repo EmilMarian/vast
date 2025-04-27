@@ -1,0 +1,56 @@
+{
+  "method": "GET",
+  "parameters": [],
+  "path": "/health",
+  "requestBody": {},
+  "responses": {
+    "200": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "properties": {
+              "mqtt_broker": {
+                "example": "mosquitto",
+                "type": "string"
+              },
+              "mqtt_connection": {
+                "enum": [
+                  "connected",
+                  "disconnected"
+                ],
+                "example": "connected",
+                "type": "string"
+              },
+              "mqtt_port": {
+                "example": 1883,
+                "type": "integer"
+              },
+              "sensor_count": {
+                "example": 3,
+                "type": "integer"
+              },
+              "socket_test": {
+                "example": true,
+                "type": "boolean"
+              },
+              "status": {
+                "enum": [
+                  "healthy"
+                ],
+                "example": "healthy",
+                "type": "string"
+              },
+              "timestamp": {
+                "example": 1646123456.789,
+                "format": "double",
+                "type": "number"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "Successful health check response"
+    }
+  }
+}

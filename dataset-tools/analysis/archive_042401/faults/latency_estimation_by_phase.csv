@@ -1,0 +1,13 @@
+latency_column,phase,measured_percent,estimated_percent,total_points
+latency_ms_temperature_temperature-sensor-01,active,100.0,0.0,750
+latency_ms_fault_status_temperature-sensor-01,active,0.0,100.0,750
+latency_ms_resources_temperature-sensor-01,active,100.0,0.0,750
+latency_ms_temperature_temperature-sensor-02,active,0.0,100.0,750
+latency_ms_fault_status_temperature-sensor-02,active,0.0,100.0,750
+latency_ms_resources_temperature-sensor-02,active,100.0,0.0,750
+latency_ms_temperature_temperature-sensor-03,active,0.0,100.0,750
+latency_ms_fault_status_temperature-sensor-03,active,0.0,100.0,750
+latency_ms_resources_temperature-sensor-03,active,100.0,0.0,750
+latency_ms_temperature_temperature-sensor-04,active,0.0,100.0,750
+latency_ms_fault_status_temperature-sensor-04,active,0.0,100.0,750
+latency_ms_resources_temperature-sensor-04,active,100.0,0.0,750

@@ -1,0 +1,23 @@
+{
+  "total_records": 13500,
+  "labeled_records": 10800,
+  "unlabeled_records": 2700,
+  "training_sequences": 6930,
+  "testing_sequences": 2970,
+  "sequence_length": 15,
+  "feature_count": 5,
+  "attack_distribution": {
+    "cmd_injection": 2520,
+    "bola": 2340,
+    "ddos": 2160,
+    "resource_exhaustion": 1980,
+    "no_attack": 1800
+  },
+  "fault_distribution": {
+    "drift": 2340,
+    "spike": 2340,
+    "none": 2160,
+    "stuck": 2160,
+    "dropout": 1800
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "dataset_type": "resource_exhaustion_vulnerability_analysis",
+  "created_at": "2025-04-24T14:55:57+03:00",
+  "sensor_host": "localhost",
+  "sensor_port": "12384",
+  "compression_ratio": 2000,
+  "attack_description": "Resource exhaustion via malicious firmware update (decompression bomb)",
+  "fault_scenarios": {
+    "none": {
+      "baseline_file": "datasets/master_20250424/resource_exhaustion/none_fault/resexhaustion_none_baseline_20250424_145612.jsonl",
+      "event_file": "datasets/master_20250424/resource_exhaustion/none_fault/resexhaustion_none_attack_20250424_145812.jsonl",
+      "recovery_file": "datasets/master_20250424/resource_exhaustion/none_fault/resexhaustion_none_recovery_20250424_150312.jsonl"
+    }
+  ,
+    "stuck": {
+      "baseline_file": "datasets/master_20250424/resource_exhaustion/stuck_fault/resexhaustion_stuck_baseline_20250424_150833.jsonl",
+      "event_file": "datasets/master_20250424/resource_exhaustion/stuck_fault/resexhaustion_stuck_attack_20250424_151033.jsonl",
+      "recovery_file": "datasets/master_20250424/resource_exhaustion/stuck_fault/resexhaustion_stuck_recovery_20250424_151533.jsonl"
+    }
+  ,
+    "drift": {
+      "baseline_file": "datasets/master_20250424/resource_exhaustion/drift_fault/resexhaustion_drift_baseline_20250424_152054.jsonl",
+      "event_file": "datasets/master_20250424/resource_exhaustion/drift_fault/resexhaustion_drift_attack_20250424_152254.jsonl",
+      "recovery_file": "datasets/master_20250424/resource_exhaustion/drift_fault/resexhaustion_drift_recovery_20250424_152754.jsonl"
+    }
+  ,
+    "spike": {
+      "baseline_file": "datasets/master_20250424/resource_exhaustion/spike_fault/resexhaustion_spike_baseline_20250424_153315.jsonl",
+      "event_file": "datasets/master_20250424/resource_exhaustion/spike_fault/resexhaustion_spike_attack_20250424_153515.jsonl",
+      "recovery_file": "datasets/master_20250424/resource_exhaustion/spike_fault/resexhaustion_spike_recovery_20250424_154015.jsonl"
+    }
+  ,
+    "dropout": {
+      "baseline_file": "datasets/master_20250424/resource_exhaustion/dropout_fault/resexhaustion_dropout_baseline_20250424_154536.jsonl",
+      "event_file": "datasets/master_20250424/resource_exhaustion/dropout_fault/resexhaustion_dropout_attack_20250424_154736.jsonl",
+      "recovery_file": "datasets/master_20250424/resource_exhaustion/dropout_fault/resexhaustion_dropout_recovery_20250424_155236.jsonl"
+    }
+  }
+}
