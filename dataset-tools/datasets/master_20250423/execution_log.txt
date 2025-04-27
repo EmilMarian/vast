@@ -1,0 +1,188 @@
+[2025-04-23 10:32:05] Checking Docker availability...
+[2025-04-23 10:32:05] WARNING: Docker command not accessible. Some scripts may fail.
+[2025-04-23 10:32:05] Consider adding your user to the docker group:
+[2025-04-23 10:32:05]     sudo usermod -aG docker mango
+[2025-04-23 10:32:05] Then log out and log back in
+[2025-04-23 10:32:05] Continuing anyway...
+[2025-04-23 10:32:05] ============================================================
+[2025-04-23 10:32:05] Starting attack data collection suite
+[2025-04-23 10:32:05] Target sensor: localhost:12384
+[2025-04-23 10:32:05] Prometheus URL: http://localhost:9090
+[2025-04-23 10:32:05] Master output directory: datasets/master_20250423
+[2025-04-23 10:32:05] ============================================================
+[2025-04-23 10:32:05] ============================================================
+[2025-04-23 10:32:05] 1. Collecting sensor fault data
+[2025-04-23 10:32:05] ============================================================
+[2025-04-23 10:32:05] Starting execution of ./faults_dataset_generator.sh...
+[2025-04-23 10:32:05] Output directory: datasets/master_20250423/faults
+[2025-04-23 10:32:05] Command: ./faults_dataset_generator.sh --sensor localhost --port 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/faults
+[2025-04-23 11:03:48] Successfully completed ./faults_dataset_generator.sh
+[2025-04-23 11:03:48] Metadata file: datasets/master_20250423/faults/fault_dataset_master_20250423_103205.json
+[2025-04-23 11:03:48] Waiting 60 seconds for system to stabilize...
+[2025-04-23 11:04:48] ============================================================
+[2025-04-23 11:04:48] 2. Collecting BOLA (Broken Object Level Authorization) attack data
+[2025-04-23 11:04:48] ============================================================
+[2025-04-23 11:04:48] Starting execution of ./bola_dataset_generator.sh...
+[2025-04-23 11:04:48] Output directory: datasets/master_20250423/bola
+[2025-04-23 11:04:48] Command: ./bola_dataset_generator.sh --sensor localhost --sensor-port 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/bola
+[2025-04-23 11:43:10] Successfully completed ./bola_dataset_generator.sh
+[2025-04-23 11:43:10] Metadata file: datasets/master_20250423/bola/bola_dataset_master_20250423_110448.json
+[2025-04-23 11:43:10] Waiting 60 seconds for system to stabilize...
+[2025-04-23 11:44:10] ============================================================
+[2025-04-23 11:44:10] 3. Collecting command injection attack data
+[2025-04-23 11:44:10] ============================================================
+[2025-04-23 11:44:10] Starting execution of ./command_injection_dataset_generator.sh...
+[2025-04-23 11:44:10] Output directory: datasets/master_20250423/command_injection
+[2025-04-23 11:44:10] Command: ./command_injection_dataset_generator.sh --sensors localhost --ports 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/command_injection
+[2025-04-23 13:21:34] Successfully completed ./command_injection_dataset_generator.sh
+[2025-04-23 13:21:34] Metadata file: datasets/master_20250423/command_injection/command_injection_dataset_master_20250423_123624.json
+[2025-04-23 13:21:34] Waiting 60 seconds for system to stabilize...
+[2025-04-23 13:22:34] ============================================================
+[2025-04-23 13:22:34] 4. Collecting DDoS attack data
+[2025-04-23 13:22:34] ============================================================
+[2025-04-23 13:22:34] Starting execution of ./ddos_dataset_generator.sh...
+[2025-04-23 13:22:34] Output directory: datasets/master_20250423/ddos
+[2025-04-23 13:22:34] Command: ./ddos_dataset_generator.sh --sensors localhost --ports 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/ddos
+[2025-04-23 14:09:17] Successfully completed ./ddos_dataset_generator.sh
+[2025-04-23 14:09:17] Metadata file: datasets/master_20250423/ddos/ddos_dataset_master_20250423_132234.json
+[2025-04-23 14:09:17] Waiting 60 seconds for system to stabilize...
+[2025-04-23 14:10:17] ============================================================
+[2025-04-23 14:10:17] 5. Collecting resource exhaustion attack data
+[2025-04-23 14:10:17] ============================================================
+[2025-04-23 14:10:17] Starting execution of ./resource_exhaustion_dataset_generator.sh...
+[2025-04-23 14:10:17] Output directory: datasets/master_20250423/resource_exhaustion
+[2025-04-23 14:10:17] Command: ./resource_exhaustion_dataset_generator.sh --sensor localhost --port 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/resource_exhaustion
+[2025-04-23 15:12:01] Successfully completed ./resource_exhaustion_dataset_generator.sh
+[2025-04-23 15:12:01] Metadata file: datasets/master_20250423/resource_exhaustion/resource_exhaustion_dataset_master_20250423_141017.json
+[2025-04-23 15:12:01] ============================================================
+[2025-04-23 15:12:01] All data collection scripts completed!
+[2025-04-23 15:12:01] Data is stored in: datasets/master_20250423
+[2025-04-23 15:12:01] ============================================================
+[2025-04-23 15:12:01] Metadata files generated:
+[2025-04-23 15:12:01]  - datasets/master_20250423/bola/bola_dataset_master_20250423_110448.json
+[2025-04-23 15:12:01]  - datasets/master_20250423/faults/fault_dataset_master_20250423_103205.json
+[2025-04-23 15:12:01]  - datasets/master_20250423/resource_exhaustion/resource_exhaustion_dataset_master_20250423_141017.json
+[2025-04-23 15:12:01]  - datasets/master_20250423/command_injection/command_injection_dataset_master_20250423_123624.json
+[2025-04-23 15:12:01]  - datasets/master_20250423/ddos/ddos_dataset_master_20250423_132234.json
+[2025-04-23 15:12:01] To process all datasets, you can run the corresponding processor scripts with these metadata files.
+[2025-04-23 15:12:01] Example:
+[2025-04-23 15:12:01]   python3 bola_processor.py --metadata <metadata_file>
+[2025-04-23 15:12:01]   python3 command_injection_processor.py --metadata <metadata_file>
+[2025-04-23 15:12:01]   python3 ddos_processor.py --metadata <metadata_file>
+[2025-04-23 15:12:01]   python3 resource_exhaustion_processor.py --metadata <metadata_file>
+[2025-04-23 15:51:55] Checking Docker availability...
+[2025-04-23 15:51:55] WARNING: Docker command not accessible. Some scripts may fail.
+[2025-04-23 15:51:55] Consider adding your user to the docker group:
+[2025-04-23 15:51:55]     sudo usermod -aG docker mango
+[2025-04-23 15:51:55] Then log out and log back in
+[2025-04-23 15:51:55] Continuing anyway...
+[2025-04-23 15:51:55] ============================================================
+[2025-04-23 15:51:55] Starting attack data collection suite
+[2025-04-23 15:51:55] Target sensor: localhost:12384
+[2025-04-23 15:51:55] Prometheus URL: http://localhost:9090
+[2025-04-23 15:51:55] Master output directory: datasets/master_20250423
+[2025-04-23 15:51:55] ============================================================
+[2025-04-23 15:51:55] ============================================================
+[2025-04-23 15:51:55] 1. Collecting sensor fault data
+[2025-04-23 15:51:55] ============================================================
+[2025-04-23 15:51:55] Starting execution of ./faults_dataset_generator.sh...
+[2025-04-23 15:51:55] Output directory: datasets/master_20250423/faults
+[2025-04-23 15:51:55] Command: ./faults_dataset_generator.sh --sensor localhost --port 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/faults
+[2025-04-23 16:23:36] Successfully completed ./faults_dataset_generator.sh
+[2025-04-23 16:23:36] Metadata file: datasets/master_20250423/faults/fault_dataset_master_20250423_155155.json
+[2025-04-23 16:23:36] Waiting 60 seconds for system to stabilize...
+[2025-04-23 16:24:36] ============================================================
+[2025-04-23 16:24:36] 2. Collecting BOLA (Broken Object Level Authorization) attack data
+[2025-04-23 16:24:36] ============================================================
+[2025-04-23 16:24:36] Starting execution of ./bola_dataset_generator.sh...
+[2025-04-23 16:24:36] Output directory: datasets/master_20250423/bola
+[2025-04-23 16:24:36] Command: ./bola_dataset_generator.sh --sensor localhost --sensor-port 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/bola
+[2025-04-23 17:02:59] Successfully completed ./bola_dataset_generator.sh
+[2025-04-23 17:02:59] Metadata file: datasets/master_20250423/bola/bola_dataset_master_20250423_162436.json
+[2025-04-23 17:02:59] Waiting 60 seconds for system to stabilize...
+[2025-04-23 17:03:59] ============================================================
+[2025-04-23 17:03:59] 3. Collecting command injection attack data
+[2025-04-23 17:03:59] ============================================================
+[2025-04-23 17:03:59] Starting execution of ./command_injection_dataset_generator.sh...
+[2025-04-23 17:03:59] Output directory: datasets/master_20250423/command_injection
+[2025-04-23 17:03:59] Command: ./command_injection_dataset_generator.sh --sensors localhost --ports 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/command_injection
+[2025-04-23 21:11:26] Checking Docker availability...
+[2025-04-23 21:11:27] WARNING: Docker command not accessible. Some scripts may fail.
+[2025-04-23 21:11:27] Consider adding your user to the docker group:
+[2025-04-23 21:11:27]     sudo usermod -aG docker mango
+[2025-04-23 21:11:27] Then log out and log back in
+[2025-04-23 21:11:27] Continuing anyway...
+[2025-04-23 21:11:27] ============================================================
+[2025-04-23 21:11:27] Starting attack data collection suite
+[2025-04-23 21:11:27] Target sensor: localhost:12384
+[2025-04-23 21:11:27] Prometheus URL: http://localhost:9090
+[2025-04-23 21:11:27] Master output directory: datasets/master_20250423
+[2025-04-23 21:11:27] ============================================================
+[2025-04-23 21:11:27] ============================================================
+[2025-04-23 21:11:27] 1. Collecting sensor fault data
+[2025-04-23 21:11:27] ============================================================
+[2025-04-23 21:11:27] Starting execution of ./faults_dataset_generator.sh...
+[2025-04-23 21:11:27] Output directory: datasets/master_20250423/faults
+[2025-04-23 21:11:27] Command: ./faults_dataset_generator.sh --sensor localhost --port 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/faults
+[2025-04-23 21:43:09] Successfully completed ./faults_dataset_generator.sh
+[2025-04-23 21:43:09] Metadata file: datasets/master_20250423/faults/fault_dataset_master_20250423_211127.json
+[2025-04-23 21:43:09] Waiting 60 seconds for system to stabilize...
+[2025-04-23 21:44:09] ============================================================
+[2025-04-23 21:44:09] 2. Collecting BOLA (Broken Object Level Authorization) attack data
+[2025-04-23 21:44:09] ============================================================
+[2025-04-23 21:44:09] Starting execution of ./bola_dataset_generator.sh...
+[2025-04-23 21:44:09] Output directory: datasets/master_20250423/bola
+[2025-04-23 21:44:09] Command: ./bola_dataset_generator.sh --sensor localhost --sensor-port 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/bola
+[2025-04-23 22:22:32] Successfully completed ./bola_dataset_generator.sh
+[2025-04-23 22:22:32] Metadata file: datasets/master_20250423/bola/bola_dataset_master_20250423_214409.json
+[2025-04-23 22:22:32] Waiting 60 seconds for system to stabilize...
+[2025-04-23 22:23:32] ============================================================
+[2025-04-23 22:23:32] 3. Collecting command injection attack data
+[2025-04-23 22:23:32] ============================================================
+[2025-04-23 22:23:32] Starting execution of ./command_injection_dataset_generator.sh...
+[2025-04-23 22:23:32] Output directory: datasets/master_20250423/command_injection
+[2025-04-23 22:23:32] Command: ./command_injection_dataset_generator.sh --sensors localhost --ports 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/command_injection
+[2025-04-23 23:09:23] Successfully completed ./command_injection_dataset_generator.sh
+[2025-04-23 23:09:23] Metadata file: datasets/master_20250423/command_injection/command_injection_dataset_master_20250423_222919.json
+[2025-04-23 23:09:23] Waiting 60 seconds for system to stabilize...
+[2025-04-23 23:10:23] ============================================================
+[2025-04-23 23:10:23] 4. Collecting DDoS attack data
+[2025-04-23 23:10:23] ============================================================
+[2025-04-23 23:10:23] Starting execution of ./ddos_dataset_generator.sh...
+[2025-04-23 23:10:23] Output directory: datasets/master_20250423/ddos
+[2025-04-23 23:10:23] Command: ./ddos_dataset_generator.sh --sensors localhost --ports 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/ddos
+[2025-04-23 23:57:06] Successfully completed ./ddos_dataset_generator.sh
+[2025-04-23 23:57:06] Metadata file: datasets/master_20250423/ddos/ddos_dataset_master_20250423_231023.json
+[2025-04-23 23:57:06] Waiting 60 seconds for system to stabilize...
+[2025-04-23 23:58:06] ============================================================
+[2025-04-23 23:58:06] 5. Collecting resource exhaustion attack data
+[2025-04-23 23:58:06] ============================================================
+[2025-04-23 23:58:06] Starting execution of ./resource_exhaustion_dataset_generator.sh...
+[2025-04-23 23:58:06] Output directory: datasets/master_20250423/resource_exhaustion
+[2025-04-23 23:58:06] Command: ./resource_exhaustion_dataset_generator.sh --sensor localhost --port 12384 --prometheus http://localhost:9090 --output datasets/master_20250423/resource_exhaustion
+[2025-04-24 00:59:49] Successfully completed ./resource_exhaustion_dataset_generator.sh
+[2025-04-24 00:59:49] Metadata file: datasets/master_20250423/resource_exhaustion/resource_exhaustion_dataset_master_20250423_235806.json
+[2025-04-24 00:59:49] ============================================================
+[2025-04-24 00:59:49] All data collection scripts completed!
+[2025-04-24 00:59:49] Data is stored in: datasets/master_20250423
+[2025-04-24 00:59:49] ============================================================
+[2025-04-24 00:59:49] Metadata files generated:
+[2025-04-24 00:59:49]  - datasets/master_20250423/bola/bola_dataset_master_20250423_214409.json
+[2025-04-24 00:59:49]  - datasets/master_20250423/bola/bola_dataset_master_20250423_162436.json
+[2025-04-24 00:59:49]  - datasets/master_20250423/bola/bola_dataset_master_20250423_110448.json
+[2025-04-24 00:59:49]  - datasets/master_20250423/faults/fault_dataset_master_20250423_155155.json
+[2025-04-24 00:59:49]  - datasets/master_20250423/faults/fault_dataset_master_20250423_211127.json
+[2025-04-24 00:59:49]  - datasets/master_20250423/faults/fault_dataset_master_20250423_103205.json
+[2025-04-24 00:59:49]  - datasets/master_20250423/resource_exhaustion/resource_exhaustion_dataset_master_20250423_235806.json
+[2025-04-24 00:59:49]  - datasets/master_20250423/resource_exhaustion/resource_exhaustion_dataset_master_20250423_141017.json
+[2025-04-24 00:59:49]  - datasets/master_20250423/command_injection/command_injection_dataset_master_20250423_123624.json
+[2025-04-24 00:59:49]  - datasets/master_20250423/command_injection/command_injection_dataset_master_20250423_172242.json
+[2025-04-24 00:59:49]  - datasets/master_20250423/command_injection/command_injection_dataset_master_20250423_222919.json
+[2025-04-24 00:59:49]  - datasets/master_20250423/ddos/ddos_dataset_master_20250423_231023.json
+[2025-04-24 00:59:49]  - datasets/master_20250423/ddos/ddos_dataset_master_20250423_132234.json
+[2025-04-24 00:59:49] To process all datasets, you can run the corresponding processor scripts with these metadata files.
+[2025-04-24 00:59:49] Example:
+[2025-04-24 00:59:49]   python3 bola_processor.py --metadata <metadata_file>
+[2025-04-24 00:59:49]   python3 command_injection_processor.py --metadata <metadata_file>
+[2025-04-24 00:59:50]   python3 ddos_processor.py --metadata <metadata_file>
+[2025-04-24 00:59:50]   python3 resource_exhaustion_processor.py --metadata <metadata_file>

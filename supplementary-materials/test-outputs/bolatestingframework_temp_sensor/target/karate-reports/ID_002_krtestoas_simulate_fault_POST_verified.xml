@@ -1,0 +1,29 @@
+<testsuite failures="1" name="ID_002_krtestoas_simulate_fault_POST_verified.feature" skipped="0" tests="1" time="0.233322"><testcase classname="ID_002_krtestoas_simulate_fault_POST_verified" name="Test Authentication for Fault Simulation Endpoint" time="0.233322"><failure message="not a callable feature or js function: [type: MAP, value: {username=admin, password=admin}]&#10;classpath:ID_002_krtestoas_simulate_fault_POST_verified.feature:18">* url 'http://192.168.1.109:12384' ........................................ passed
+* def validAuth = function(){ return { username: 'admin', password: 'admin' } } . passed
+Given path '/simulate/fault' .............................................. passed
+And request {"fault_mode": "stuck"} ....................................... passed
+When method post .......................................................... passed
+Then status 401 ........................................................... passed
+And match response.error == 'Unauthorized' ................................ passed
+Given path '/simulate/fault' .............................................. passed
+And request {"fault_mode": "stuck"} ....................................... passed
+And header Authorization = call validAuth() ............................... failed
+
+Stack Trace:
+com.intuit.karate.KarateException: not a callable feature or js function: [type: MAP, value: {username=admin, password=admin}]
+classpath:ID_002_krtestoas_simulate_fault_POST_verified.feature:18&#13;
+	at &lt;feature&gt;.: And header Authorization = call validAuth() (classpath:ID_002_krtestoas_simulate_fault_POST_verified.feature:18:18)&#13;
+
+When method post .......................................................... skipped
+Then status 200 ........................................................... skipped
+And match response.status == 'success' .................................... skipped
+And match response.fault_mode == 'stuck' .................................. skipped
+Given path '/simulate/fault' .............................................. skipped
+And request {"fault_mode": "none"} ........................................ skipped
+And header Authorization = call validAuth() ............................... skipped
+When method post .......................................................... skipped
+Then status 200 ........................................................... skipped
+And match response.status == 'success' .................................... skipped
+And match response.fault_mode == 'none' ................................... skipped
+</failure></testcase>
+</testsuite>

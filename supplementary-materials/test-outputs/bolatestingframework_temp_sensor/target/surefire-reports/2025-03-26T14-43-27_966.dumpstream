@@ -1,0 +1,5 @@
+# Created at 2025-03-26T14:43:29.531
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Projects\2025\iot-sensor-testbet\krttlm-test\karate_framework_iot_gateway\bolatestingframework_temp_sensor\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

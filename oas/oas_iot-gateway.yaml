@@ -1,0 +1,303 @@
+openapi: 3.0.0
+info:
+  title: IoT Gateway API
+  description: API for managing and retrieving sensor data from IoT devices
+  version: 1.0.0
+  contact:
+    name: IoT Gateway Team
+
+servers:
+  - url: http://localhost:48080
+    description: Local development server
+  - url: http://192.168.0.104:48080
+    description: Production server
+  - url: http://192.168.1.110:48080
+    description: Production server
+
+components:
+  schemas:
+    SensorData:
+      type: object
+      properties:
+        temperature:
+          type: number
+          format: float
+          description: Temperature reading from the sensor
+          example: 22.5
+        unit:
+          type: string
+          description: Unit of measurement (e.g., celsius)
+          example: "celsius"
+        timestamp:
+          type: number
+          format: double
+          description: Original sensor timestamp
+          example: 1646123456.789
+        gateway_timestamp:
+          type: number
+          format: double
+          description: Timestamp when gateway received the data
+          example: 1646123456.999
+        sensor_id:
+          type: string
+          description: Unique identifier of the sensor
+          example: "TEMP001"
+        type:
+          type: string
+          description: Type of sensor
+          example: "temperature"
+        location:
+          type: string
+          description: Location of the sensor
+          example: "greenhouse-1"
+        data_source:
+          type: string
+          description: Format of the original data
+          example: "minimal_format"
+        confidence:
+          type: number
+          format: float
+          description: Confidence score of the data processing
+          example: 1.0
+        error:
+          type: string
+          description: Error message if processing failed
+          example: "Failed to parse using any known format"
+        raw_data:
+          type: string
+          description: Raw data as received from sensor
+          example: "22.5"
+        raw_hex:
+          type: string
+          description: Raw binary data in hex format (for binary format errors)
+          example: "0100A3F5"
+        manufacturer:
+          type: string
+          description: Manufacturer of the sensor
+          example: "SensorCorp"
+        model:
+          type: string
+          description: Model number of the sensor
+          example: "TC-100"
+
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [healthy]
+          example: "healthy"
+        mqtt_connection:
+          type: string
+          enum: [connected, disconnected]
+          example: "connected"
+        mqtt_broker:
+          type: string
+          example: "mosquitto"
+        mqtt_port:
+          type: integer
+          example: 1883
+        sensor_count:
+          type: integer
+          example: 3
+        socket_test:
+          type: boolean
+          example: true
+        timestamp:
+          type: number
+          format: double
+          example: 1646123456.789
+
+    MQTTReconnectResponse:
+      type: object
+      properties:
+        status:
+          type: string
+          enum: [success, error]
+          example: "success"
+        message:
+          type: string
+          example: "MQTT reconnection initiated"
+
+    SensitiveData:
+      type: object
+      properties:
+        yield_prediction:
+          type: string
+          description: Predicted yield for the crop
+          example: "85.3 tons/hectare"
+        proprietary_settings:
+          type: object
+          properties:
+            growth_factor:
+              type: number
+              format: float
+              example: 1.2
+            nutrient_mix:
+              type: string
+              example: "formula-103"
+        alert_thresholds:
+          type: object
+          properties:
+            low:
+              type: number
+              format: float
+              example: 15.0
+            high:
+              type: number
+              format: float
+              example: 35.0
+        advanced_metrics:
+          type: object
+          properties:
+            soil_health_index:
+              type: number
+              format: float
+              example: 89.2
+            crop_stress_indicators:
+              type: array
+              items:
+                type: number
+              example: [0.12, 0.08, 0.15]
+            optimal_harvest_window:
+              type: string
+              example: "2025-07-15 to 2025-07-25"
+
+    UserSensorResponse:
+      type: object
+      additionalProperties:
+        type: object
+        properties:
+          basic_data:
+            $ref: '#/components/schemas/SensorData'
+          sensitive_data:
+            $ref: '#/components/schemas/SensitiveData'
+
+paths:
+  /data:
+    get:
+      summary: Get all sensor data
+      description: Retrieve data from all connected sensors
+      operationId: getAllSensorData
+      responses:
+        '200':
+          description: Successful response with data from all sensors
+          content:
+            application/json:
+              schema:
+                type: object
+                additionalProperties:
+                  $ref: '#/components/schemas/SensorData'
+              example:
+                "sensors/temperature":
+                  temperature: 22.5
+                  unit: "celsius"
+                  timestamp: 1646123456.789
+                  gateway_timestamp: 1646123456.999
+                  sensor_id: "TEMP001"
+                  type: "temperature"
+                  location: "greenhouse-1"
+                  data_source: "minimal_format"
+                  confidence: 1.0
+                  manufacturer: "SensorCorp"
+                  model: "TC-100"
+
+  /data/{sensor_id}:
+    get:
+      summary: Get specific sensor data
+      description: Retrieve data from a specific sensor by its ID
+      operationId: getSensorDataById
+      parameters:
+        - name: sensor_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the sensor to retrieve data from (e.g., TEMP001)
+          example: "TEMP001"
+      responses:
+        '200':
+          description: Successful response with sensor data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SensorData'
+        '404':
+          description: Sensor not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "Sensor not found"
+
+  /health:
+    get:
+      summary: Health check
+      description: Check the health status of the gateway service including MQTT connection and socket test
+      operationId: healthCheck
+      responses:
+        '200':
+          description: Successful health check response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthStatus'
+
+  /mqtt/reconnect:
+    post:
+      summary: Force MQTT reconnection
+      description: Force the gateway to disconnect current connection and reconnect to the MQTT broker
+      operationId: forceMqttReconnect
+      responses:
+        '200':
+          description: Successful reconnection initiated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MQTTReconnectResponse'
+        '500':
+          description: Reconnection failed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MQTTReconnectResponse'
+              example:
+                status: "error"
+                message: "Failed to reconnect: Connection refused"
+
+  /users/{user_id}/sensors:
+    get:
+      summary: Get user's sensor data
+      description: |
+        Retrieve all sensor data associated with a specific user.
+        Note: This endpoint currently has a BOLA (Broken Object Level Authorization) vulnerability
+        as it does not properly verify user authorization.
+      operationId: getUserSensors
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: string
+          description: ID of the user to retrieve sensor data for
+          example: "user1"
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserSensorResponse'
+        '404':
+          description: User not found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: "User user1 not found"

@@ -1,0 +1,28 @@
+{
+  "method": "GET",
+  "parameters": [],
+  "path": "/firmware/version",
+  "requestBody": {},
+  "responses": {
+    "200": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "properties": {
+              "sensor_id": {
+                "description": "Unique identifier of the sensor",
+                "type": "string"
+              },
+              "version": {
+                "description": "Current firmware version",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "Current firmware version"
+    }
+  }
+}

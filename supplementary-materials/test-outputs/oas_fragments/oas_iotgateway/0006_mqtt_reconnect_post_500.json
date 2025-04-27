@@ -1,0 +1,36 @@
+{
+  "method": "POST",
+  "parameters": [],
+  "path": "/mqtt/reconnect",
+  "requestBody": {},
+  "responses": {
+    "500": {
+      "content": {
+        "application/json": {
+          "example": {
+            "message": "Failed to reconnect: Connection refused",
+            "status": "error"
+          },
+          "schema": {
+            "properties": {
+              "message": {
+                "example": "MQTT reconnection initiated",
+                "type": "string"
+              },
+              "status": {
+                "enum": [
+                  "success",
+                  "error"
+                ],
+                "example": "success",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "Reconnection failed"
+    }
+  }
+}

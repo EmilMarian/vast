@@ -1,0 +1,34 @@
+{
+  "method": "GET",
+  "parameters": [],
+  "path": "/simulate/status",
+  "requestBody": {},
+  "responses": {
+    "200": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "properties": {
+              "base_temperature": {
+                "format": "float",
+                "type": "number"
+              },
+              "fault_mode": {
+                "enum": [
+                  "none",
+                  "stuck",
+                  "drift",
+                  "spike",
+                  "dropout"
+                ],
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "Current fault status"
+    }
+  }
+}

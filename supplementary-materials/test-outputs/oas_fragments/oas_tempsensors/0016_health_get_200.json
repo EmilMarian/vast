@@ -1,0 +1,56 @@
+{
+  "method": "GET",
+  "parameters": [],
+  "path": "/health",
+  "requestBody": {},
+  "responses": {
+    "200": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "properties": {
+              "data_server_connection": {
+                "properties": {
+                  "connected": {
+                    "type": "boolean"
+                  },
+                  "connection_failures": {
+                    "type": "integer"
+                  },
+                  "last_fetch_time": {
+                    "nullable": true,
+                    "type": "number"
+                  },
+                  "registered": {
+                    "type": "boolean"
+                  },
+                  "server_url": {
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              "fault_mode": {
+                "type": "string"
+              },
+              "mqtt_broker": {
+                "type": "string"
+              },
+              "mqtt_topic": {
+                "type": "string"
+              },
+              "sensor_id": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "Health status information"
+    }
+  }
+}

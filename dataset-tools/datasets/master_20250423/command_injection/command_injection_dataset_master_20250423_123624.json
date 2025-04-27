@@ -1,0 +1,42 @@
+{
+  "dataset_type": "command_injection_analysis",
+  "created_at": "2025-04-23T12:36:24+03:00",
+  "attacker_server": "172.28.0.8",
+  "attacker_port": "4444",
+  "fault_scenarios": {
+    "none": {
+      "baseline_file": "datasets/master_20250423/command_injection/none/command_injection_none_baseline_20250423_123653.jsonl",
+      "install_file": "datasets/master_20250423/command_injection/none/command_injection_none_install_20250423_123723.jsonl",
+      "shell_file": "datasets/master_20250423/command_injection/none/command_injection_none_shell_20250423_124014.jsonl",
+      "recovery_file": "datasets/master_20250423/command_injection/none/command_injection_none_recovery_20250423_124315.jsonl"
+    }
+  ,
+    "stuck": {
+      "baseline_file": "datasets/master_20250423/command_injection/stuck/command_injection_stuck_baseline_20250423_124555.jsonl",
+      "install_file": "datasets/master_20250423/command_injection/stuck/command_injection_stuck_install_20250423_124626.jsonl",
+      "shell_file": "datasets/master_20250423/command_injection/stuck/command_injection_stuck_shell_20250423_124826.jsonl",
+      "recovery_file": "datasets/master_20250423/command_injection/stuck/command_injection_stuck_recovery_20250423_125126.jsonl"
+    }
+  ,
+    "drift": {
+      "baseline_file": "datasets/master_20250423/command_injection/drift/command_injection_drift_baseline_20250423_125402.jsonl",
+      "install_file": "datasets/master_20250423/command_injection/drift/command_injection_drift_install_20250423_125432.jsonl",
+      "shell_file": "datasets/master_20250423/command_injection/drift/command_injection_drift_shell_20250423_125824.jsonl",
+      "recovery_file": "datasets/master_20250423/command_injection/drift/command_injection_drift_recovery_20250423_130124.jsonl"
+    }
+  ,
+    "spike": {
+      "baseline_file": "datasets/master_20250423/command_injection/spike/command_injection_spike_baseline_20250423_130401.jsonl",
+      "install_file": "datasets/master_20250423/command_injection/spike/command_injection_spike_install_20250423_130431.jsonl",
+      "shell_file": "datasets/master_20250423/command_injection/spike/command_injection_spike_shell_20250423_130802.jsonl",
+      "recovery_file": "datasets/master_20250423/command_injection/spike/command_injection_spike_recovery_20250423_131102.jsonl"
+    }
+  ,
+    "dropout": {
+      "baseline_file": "datasets/master_20250423/command_injection/dropout/command_injection_dropout_baseline_20250423_131339.jsonl",
+      "install_file": "datasets/master_20250423/command_injection/dropout/command_injection_dropout_install_20250423_131409.jsonl",
+      "shell_file": "datasets/master_20250423/command_injection/dropout/command_injection_dropout_shell_20250423_131634.jsonl",
+      "recovery_file": "datasets/master_20250423/command_injection/dropout/command_injection_dropout_recovery_20250423_131934.jsonl"
+    }
+  }
+}

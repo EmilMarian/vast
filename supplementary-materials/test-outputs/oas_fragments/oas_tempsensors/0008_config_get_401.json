@@ -1,0 +1,11 @@
+{
+  "method": "GET",
+  "parameters": [],
+  "path": "/config",
+  "requestBody": {},
+  "responses": {
+    "401": {
+      "description": "Unauthorized"
+    }
+  }
+}

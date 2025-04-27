@@ -1,0 +1,258 @@
+Datasets will be saved to: datasets/master_20250423/resource_exhaustion
+=====================================================
+Processing resource exhaustion under fault condition: none
+=====================================================
+Setting fault mode to: none
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting fault mode to: none
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Collecting baseline data before resource exhaustion attack...
+Starting data collection for event: resexhaustion_none_baseline
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/none_fault/resexhaustion_none_baseline_20250423_235821.jsonl
+Baseline data collected: datasets/master_20250423/resource_exhaustion/none_fault/resexhaustion_none_baseline_20250423_235821.jsonl
+Starting data collection for resource exhaustion attack...
+Data collector running with PID 595608
+Triggering resource exhaustion attack with compression ratio: 2000
+Resource exhaustion attack response: {
+  "command": "/bin/bash /tmp/firmware/medium_firmware.sh ", 
+  "message": "Firmware updated successfully", 
+  "new_version": "1.2.3-RATIO-2000", 
+  "path": "/tmp/firmware/medium_firmware.sh", 
+  "status": "success"
+}
+Resource exhaustion attack triggered successfully
+Waiting for attack data collection to complete...
+Starting data collection for event: resexhaustion_none_attack
+Duration: 300 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90Collected snapshot 91Collected snapshot 92Collected snapshot 93Collected snapshot 94Collected snapshot 95Collected snapshot 96Collected snapshot 97Collected snapshot 98Collected snapshot 99Collected snapshot 100Collected snapshot 101Collected snapshot 102Collected snapshot 103Collected snapshot 104Collected snapshot 105Collected snapshot 106Collected snapshot 107Collected snapshot 108Collected snapshot 109Collected snapshot 110Collected snapshot 111Collected snapshot 112Collected snapshot 113Collected snapshot 114Collected snapshot 115Collected snapshot 116Collected snapshot 117Collected snapshot 118Collected snapshot 119Collected snapshot 120Collected snapshot 121Collected snapshot 122Collected snapshot 123Collected snapshot 124Collected snapshot 125Collected snapshot 126Collected snapshot 127Collected snapshot 128Collected snapshot 129Collected snapshot 130Collected snapshot 131Collected snapshot 132Collected snapshot 133Collected snapshot 134Collected snapshot 135Collected snapshot 136Collected snapshot 137Collected snapshot 138Collected snapshot 139Collected snapshot 140Collected snapshot 141Collected snapshot 142Collected snapshot 143Collected snapshot 144Collected snapshot 145Collected snapshot 146Collected snapshot 147Collected snapshot 148Collected snapshot 149Collected snapshot 150
+Completed collection with 150 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/none_fault/resexhaustion_none_attack_20250424_000021.jsonl
+Attack data collected: datasets/master_20250423/resource_exhaustion/none_fault/resexhaustion_none_attack_20250424_000021.jsonl
+Collecting post-attack recovery data...
+Starting data collection for event: resexhaustion_none_recovery
+Duration: 240 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90Collected snapshot 91Collected snapshot 92Collected snapshot 93Collected snapshot 94Collected snapshot 95Collected snapshot 96Collected snapshot 97Collected snapshot 98Collected snapshot 99Collected snapshot 100Collected snapshot 101Collected snapshot 102Collected snapshot 103Collected snapshot 104Collected snapshot 105Collected snapshot 106Collected snapshot 107Collected snapshot 108Collected snapshot 109Collected snapshot 110Collected snapshot 111Collected snapshot 112Collected snapshot 113Collected snapshot 114Collected snapshot 115Collected snapshot 116Collected snapshot 117Collected snapshot 118Collected snapshot 119Collected snapshot 120
+Completed collection with 120 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/none_fault/resexhaustion_none_recovery_20250424_000521.jsonl
+Recovery data collected: datasets/master_20250423/resource_exhaustion/none_fault/resexhaustion_none_recovery_20250424_000521.jsonl
+Setting fault mode to: none
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds before next scenario...
+=====================================================
+Processing resource exhaustion under fault condition: stuck
+=====================================================
+Setting fault mode to: none
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting fault mode to: stuck
+Fault mode set response: {
+  "fault_mode": "stuck", 
+  "status": "success"
+}
+Collecting baseline data before resource exhaustion attack...
+Starting data collection for event: resexhaustion_stuck_baseline
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/stuck_fault/resexhaustion_stuck_baseline_20250424_001042.jsonl
+Baseline data collected: datasets/master_20250423/resource_exhaustion/stuck_fault/resexhaustion_stuck_baseline_20250424_001042.jsonl
+Starting data collection for resource exhaustion attack...
+Data collector running with PID 619296
+Triggering resource exhaustion attack with compression ratio: 2000
+Resource exhaustion attack response: {
+  "command": "/bin/bash /tmp/firmware/medium_firmware.sh ", 
+  "message": "Firmware updated successfully", 
+  "new_version": "1.2.3-RATIO-2000", 
+  "path": "/tmp/firmware/medium_firmware.sh", 
+  "status": "success"
+}
+Resource exhaustion attack triggered successfully
+Waiting for attack data collection to complete...
+Starting data collection for event: resexhaustion_stuck_attack
+Duration: 300 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90Collected snapshot 91Collected snapshot 92Collected snapshot 93Collected snapshot 94Collected snapshot 95Collected snapshot 96Collected snapshot 97Collected snapshot 98Collected snapshot 99Collected snapshot 100Collected snapshot 101Collected snapshot 102Collected snapshot 103Collected snapshot 104Collected snapshot 105Collected snapshot 106Collected snapshot 107Collected snapshot 108Collected snapshot 109Collected snapshot 110Collected snapshot 111Collected snapshot 112Collected snapshot 113Collected snapshot 114Collected snapshot 115Collected snapshot 116Collected snapshot 117Collected snapshot 118Collected snapshot 119Collected snapshot 120Collected snapshot 121Collected snapshot 122Collected snapshot 123Collected snapshot 124Collected snapshot 125Collected snapshot 126Collected snapshot 127Collected snapshot 128Collected snapshot 129Collected snapshot 130Collected snapshot 131Collected snapshot 132Collected snapshot 133Collected snapshot 134Collected snapshot 135Collected snapshot 136Collected snapshot 137Collected snapshot 138Collected snapshot 139Collected snapshot 140Collected snapshot 141Collected snapshot 142Collected snapshot 143Collected snapshot 144Collected snapshot 145Collected snapshot 146Collected snapshot 147Collected snapshot 148Collected snapshot 149Collected snapshot 150
+Completed collection with 150 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/stuck_fault/resexhaustion_stuck_attack_20250424_001242.jsonl
+Attack data collected: datasets/master_20250423/resource_exhaustion/stuck_fault/resexhaustion_stuck_attack_20250424_001242.jsonl
+Collecting post-attack recovery data...
+Starting data collection for event: resexhaustion_stuck_recovery
+Duration: 240 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90Collected snapshot 91Collected snapshot 92Collected snapshot 93Collected snapshot 94Collected snapshot 95Collected snapshot 96Collected snapshot 97Collected snapshot 98Collected snapshot 99Collected snapshot 100Collected snapshot 101Collected snapshot 102Collected snapshot 103Collected snapshot 104Collected snapshot 105Collected snapshot 106Collected snapshot 107Collected snapshot 108Collected snapshot 109Collected snapshot 110Collected snapshot 111Collected snapshot 112Collected snapshot 113Collected snapshot 114Collected snapshot 115Collected snapshot 116Collected snapshot 117Collected snapshot 118Collected snapshot 119Collected snapshot 120
+Completed collection with 120 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/stuck_fault/resexhaustion_stuck_recovery_20250424_001742.jsonl
+Recovery data collected: datasets/master_20250423/resource_exhaustion/stuck_fault/resexhaustion_stuck_recovery_20250424_001742.jsonl
+Setting fault mode to: none
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds before next scenario...
+=====================================================
+Processing resource exhaustion under fault condition: drift
+=====================================================
+Setting fault mode to: none
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting fault mode to: drift
+Fault mode set response: {
+  "fault_mode": "drift", 
+  "status": "success"
+}
+Collecting baseline data before resource exhaustion attack...
+Starting data collection for event: resexhaustion_drift_baseline
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/drift_fault/resexhaustion_drift_baseline_20250424_002302.jsonl
+Baseline data collected: datasets/master_20250423/resource_exhaustion/drift_fault/resexhaustion_drift_baseline_20250424_002302.jsonl
+Starting data collection for resource exhaustion attack...
+Data collector running with PID 642527
+Triggering resource exhaustion attack with compression ratio: 2000
+Resource exhaustion attack response: {
+  "command": "/bin/bash /tmp/firmware/medium_firmware.sh ", 
+  "message": "Firmware updated successfully", 
+  "new_version": "1.2.3-RATIO-2000", 
+  "path": "/tmp/firmware/medium_firmware.sh", 
+  "status": "success"
+}
+Resource exhaustion attack triggered successfully
+Waiting for attack data collection to complete...
+Starting data collection for event: resexhaustion_drift_attack
+Duration: 300 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90Collected snapshot 91Collected snapshot 92Collected snapshot 93Collected snapshot 94Collected snapshot 95Collected snapshot 96Collected snapshot 97Collected snapshot 98Collected snapshot 99Collected snapshot 100Collected snapshot 101Collected snapshot 102Collected snapshot 103Collected snapshot 104Collected snapshot 105Collected snapshot 106Collected snapshot 107Collected snapshot 108Collected snapshot 109Collected snapshot 110Collected snapshot 111Collected snapshot 112Collected snapshot 113Collected snapshot 114Collected snapshot 115Collected snapshot 116Collected snapshot 117Collected snapshot 118Collected snapshot 119Collected snapshot 120Collected snapshot 121Collected snapshot 122Collected snapshot 123Collected snapshot 124Collected snapshot 125Collected snapshot 126Collected snapshot 127Collected snapshot 128Collected snapshot 129Collected snapshot 130Collected snapshot 131Collected snapshot 132Collected snapshot 133Collected snapshot 134Collected snapshot 135Collected snapshot 136Collected snapshot 137Collected snapshot 138Collected snapshot 139Collected snapshot 140Collected snapshot 141Collected snapshot 142Collected snapshot 143Collected snapshot 144Collected snapshot 145Collected snapshot 146Collected snapshot 147Collected snapshot 148Collected snapshot 149Collected snapshot 150
+Completed collection with 150 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/drift_fault/resexhaustion_drift_attack_20250424_002502.jsonl
+Attack data collected: datasets/master_20250423/resource_exhaustion/drift_fault/resexhaustion_drift_attack_20250424_002502.jsonl
+Collecting post-attack recovery data...
+Starting data collection for event: resexhaustion_drift_recovery
+Duration: 240 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90Collected snapshot 91Collected snapshot 92Collected snapshot 93Collected snapshot 94Collected snapshot 95Collected snapshot 96Collected snapshot 97Collected snapshot 98Collected snapshot 99Collected snapshot 100Collected snapshot 101Collected snapshot 102Collected snapshot 103Collected snapshot 104Collected snapshot 105Collected snapshot 106Collected snapshot 107Collected snapshot 108Collected snapshot 109Collected snapshot 110Collected snapshot 111Collected snapshot 112Collected snapshot 113Collected snapshot 114Collected snapshot 115Collected snapshot 116Collected snapshot 117Collected snapshot 118Collected snapshot 119Collected snapshot 120
+Completed collection with 120 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/drift_fault/resexhaustion_drift_recovery_20250424_003003.jsonl
+Recovery data collected: datasets/master_20250423/resource_exhaustion/drift_fault/resexhaustion_drift_recovery_20250424_003003.jsonl
+Setting fault mode to: none
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds before next scenario...
+=====================================================
+Processing resource exhaustion under fault condition: spike
+=====================================================
+Setting fault mode to: none
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting fault mode to: spike
+Fault mode set response: {
+  "fault_mode": "spike", 
+  "status": "success"
+}
+Collecting baseline data before resource exhaustion attack...
+Starting data collection for event: resexhaustion_spike_baseline
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/spike_fault/resexhaustion_spike_baseline_20250424_003523.jsonl
+Baseline data collected: datasets/master_20250423/resource_exhaustion/spike_fault/resexhaustion_spike_baseline_20250424_003523.jsonl
+Starting data collection for resource exhaustion attack...
+Data collector running with PID 666114
+Triggering resource exhaustion attack with compression ratio: 2000
+Resource exhaustion attack response: 
+Failed to trigger resource exhaustion attack
+Response: 
+Waiting for attack data collection to complete...
+Starting data collection for event: resexhaustion_spike_attack
+Duration: 300 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90Collected snapshot 91Collected snapshot 92Collected snapshot 93Collected snapshot 94Collected snapshot 95Collected snapshot 96Collected snapshot 97Collected snapshot 98Collected snapshot 99Collected snapshot 100Collected snapshot 101Collected snapshot 102Collected snapshot 103Collected snapshot 104Collected snapshot 105Collected snapshot 106Collected snapshot 107Collected snapshot 108Collected snapshot 109Collected snapshot 110Collected snapshot 111Collected snapshot 112Collected snapshot 113Collected snapshot 114Collected snapshot 115Collected snapshot 116Collected snapshot 117Collected snapshot 118Collected snapshot 119Collected snapshot 120Collected snapshot 121Collected snapshot 122Collected snapshot 123Collected snapshot 124Collected snapshot 125Collected snapshot 126Collected snapshot 127Collected snapshot 128Collected snapshot 129Collected snapshot 130Collected snapshot 131Collected snapshot 132Collected snapshot 133Collected snapshot 134Collected snapshot 135Collected snapshot 136Collected snapshot 137Collected snapshot 138Collected snapshot 139Collected snapshot 140Collected snapshot 141Collected snapshot 142Collected snapshot 143Collected snapshot 144Collected snapshot 145Collected snapshot 146Collected snapshot 147Collected snapshot 148Collected snapshot 149Collected snapshot 150
+Completed collection with 150 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/spike_fault/resexhaustion_spike_attack_20250424_003723.jsonl
+Attack data collected: datasets/master_20250423/resource_exhaustion/spike_fault/resexhaustion_spike_attack_20250424_003723.jsonl
+Collecting post-attack recovery data...
+Starting data collection for event: resexhaustion_spike_recovery
+Duration: 240 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90Collected snapshot 91Collected snapshot 92Collected snapshot 93Collected snapshot 94Collected snapshot 95Collected snapshot 96Collected snapshot 97Collected snapshot 98Collected snapshot 99Collected snapshot 100Collected snapshot 101Collected snapshot 102Collected snapshot 103Collected snapshot 104Collected snapshot 105Collected snapshot 106Collected snapshot 107Collected snapshot 108Collected snapshot 109Collected snapshot 110Collected snapshot 111Collected snapshot 112Collected snapshot 113Collected snapshot 114Collected snapshot 115Collected snapshot 116Collected snapshot 117Collected snapshot 118Collected snapshot 119Collected snapshot 120
+Completed collection with 120 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/spike_fault/resexhaustion_spike_recovery_20250424_004224.jsonl
+Recovery data collected: datasets/master_20250423/resource_exhaustion/spike_fault/resexhaustion_spike_recovery_20250424_004224.jsonl
+Setting fault mode to: none
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds before next scenario...
+=====================================================
+Processing resource exhaustion under fault condition: dropout
+=====================================================
+Setting fault mode to: none
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Setting fault mode to: dropout
+Fault mode set response: {
+  "fault_mode": "dropout", 
+  "status": "success"
+}
+Collecting baseline data before resource exhaustion attack...
+Starting data collection for event: resexhaustion_dropout_baseline
+Duration: 120 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60
+Completed collection with 60 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/dropout_fault/resexhaustion_dropout_baseline_20250424_004744.jsonl
+Baseline data collected: datasets/master_20250423/resource_exhaustion/dropout_fault/resexhaustion_dropout_baseline_20250424_004744.jsonl
+Starting data collection for resource exhaustion attack...
+Data collector running with PID 691199
+Triggering resource exhaustion attack with compression ratio: 2000
+Resource exhaustion attack response: {
+  "command": "/bin/bash /tmp/firmware/medium_firmware.sh ", 
+  "message": "Firmware updated successfully", 
+  "new_version": "1.2.3-RATIO-2000", 
+  "path": "/tmp/firmware/medium_firmware.sh", 
+  "status": "success"
+}
+Resource exhaustion attack triggered successfully
+Waiting for attack data collection to complete...
+Starting data collection for event: resexhaustion_dropout_attack
+Duration: 300 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90Collected snapshot 91Collected snapshot 92Collected snapshot 93Collected snapshot 94Collected snapshot 95Collected snapshot 96Collected snapshot 97Collected snapshot 98Collected snapshot 99Collected snapshot 100Collected snapshot 101Collected snapshot 102Collected snapshot 103Collected snapshot 104Collected snapshot 105Collected snapshot 106Collected snapshot 107Collected snapshot 108Collected snapshot 109Collected snapshot 110Collected snapshot 111Collected snapshot 112Collected snapshot 113Collected snapshot 114Collected snapshot 115Collected snapshot 116Collected snapshot 117Collected snapshot 118Collected snapshot 119Collected snapshot 120Collected snapshot 121Collected snapshot 122Collected snapshot 123Collected snapshot 124Collected snapshot 125Collected snapshot 126Collected snapshot 127Collected snapshot 128Collected snapshot 129Collected snapshot 130Collected snapshot 131Collected snapshot 132Collected snapshot 133Collected snapshot 134Collected snapshot 135Collected snapshot 136Collected snapshot 137Collected snapshot 138Collected snapshot 139Collected snapshot 140Collected snapshot 141Collected snapshot 142Collected snapshot 143Collected snapshot 144Collected snapshot 145Collected snapshot 146Collected snapshot 147Collected snapshot 148Collected snapshot 149Collected snapshot 150
+Completed collection with 150 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/dropout_fault/resexhaustion_dropout_attack_20250424_004944.jsonl
+Attack data collected: datasets/master_20250423/resource_exhaustion/dropout_fault/resexhaustion_dropout_attack_20250424_004944.jsonl
+Collecting post-attack recovery data...
+Starting data collection for event: resexhaustion_dropout_recovery
+Duration: 240 seconds, Interval: 2 seconds
+Collected snapshot 1Collected snapshot 2Collected snapshot 3Collected snapshot 4Collected snapshot 5Collected snapshot 6Collected snapshot 7Collected snapshot 8Collected snapshot 9Collected snapshot 10Collected snapshot 11Collected snapshot 12Collected snapshot 13Collected snapshot 14Collected snapshot 15Collected snapshot 16Collected snapshot 17Collected snapshot 18Collected snapshot 19Collected snapshot 20Collected snapshot 21Collected snapshot 22Collected snapshot 23Collected snapshot 24Collected snapshot 25Collected snapshot 26Collected snapshot 27Collected snapshot 28Collected snapshot 29Collected snapshot 30Collected snapshot 31Collected snapshot 32Collected snapshot 33Collected snapshot 34Collected snapshot 35Collected snapshot 36Collected snapshot 37Collected snapshot 38Collected snapshot 39Collected snapshot 40Collected snapshot 41Collected snapshot 42Collected snapshot 43Collected snapshot 44Collected snapshot 45Collected snapshot 46Collected snapshot 47Collected snapshot 48Collected snapshot 49Collected snapshot 50Collected snapshot 51Collected snapshot 52Collected snapshot 53Collected snapshot 54Collected snapshot 55Collected snapshot 56Collected snapshot 57Collected snapshot 58Collected snapshot 59Collected snapshot 60Collected snapshot 61Collected snapshot 62Collected snapshot 63Collected snapshot 64Collected snapshot 65Collected snapshot 66Collected snapshot 67Collected snapshot 68Collected snapshot 69Collected snapshot 70Collected snapshot 71Collected snapshot 72Collected snapshot 73Collected snapshot 74Collected snapshot 75Collected snapshot 76Collected snapshot 77Collected snapshot 78Collected snapshot 79Collected snapshot 80Collected snapshot 81Collected snapshot 82Collected snapshot 83Collected snapshot 84Collected snapshot 85Collected snapshot 86Collected snapshot 87Collected snapshot 88Collected snapshot 89Collected snapshot 90Collected snapshot 91Collected snapshot 92Collected snapshot 93Collected snapshot 94Collected snapshot 95Collected snapshot 96Collected snapshot 97Collected snapshot 98Collected snapshot 99Collected snapshot 100Collected snapshot 101Collected snapshot 102Collected snapshot 103Collected snapshot 104Collected snapshot 105Collected snapshot 106Collected snapshot 107Collected snapshot 108Collected snapshot 109Collected snapshot 110Collected snapshot 111Collected snapshot 112Collected snapshot 113Collected snapshot 114Collected snapshot 115Collected snapshot 116Collected snapshot 117Collected snapshot 118Collected snapshot 119Collected snapshot 120
+Completed collection with 120 snapshots.
+Dataset saved to: datasets/master_20250423/resource_exhaustion/dropout_fault/resexhaustion_dropout_recovery_20250424_005444.jsonl
+Recovery data collected: datasets/master_20250423/resource_exhaustion/dropout_fault/resexhaustion_dropout_recovery_20250424_005444.jsonl
+Setting fault mode to: none
+Fault mode set response: {
+  "fault_mode": "none", 
+  "status": "success"
+}
+Cooling down for 60 seconds before next scenario...
+=====================================================
+Resource exhaustion dataset collection complete!
+=====================================================
+Master metadata file: datasets/master_20250423/resource_exhaustion/resource_exhaustion_dataset_master_20250423_235806.json
+
+To process this data into CSV format, run:
+python3 resource_exhaustion_processor.py --metadata datasets/master_20250423/resource_exhaustion/resource_exhaustion_dataset_master_20250423_235806.json

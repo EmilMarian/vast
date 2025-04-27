@@ -1,0 +1,105 @@
+{
+  "method": "GET",
+  "parameters": [
+    {
+      "description": "ID of the sensor to retrieve data from (e.g., TEMP001)",
+      "example": "TEMP001",
+      "in": "path",
+      "name": "sensor_id",
+      "required": true,
+      "schema": {
+        "type": "string"
+      }
+    }
+  ],
+  "path": "/data/{sensor_id}",
+  "requestBody": {},
+  "responses": {
+    "200": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "properties": {
+              "confidence": {
+                "description": "Confidence score of the data processing",
+                "example": 1.0,
+                "format": "float",
+                "type": "number"
+              },
+              "data_source": {
+                "description": "Format of the original data",
+                "example": "minimal_format",
+                "type": "string"
+              },
+              "error": {
+                "description": "Error message if processing failed",
+                "example": "Failed to parse using any known format",
+                "type": "string"
+              },
+              "gateway_timestamp": {
+                "description": "Timestamp when gateway received the data",
+                "example": 1646123456.999,
+                "format": "double",
+                "type": "number"
+              },
+              "location": {
+                "description": "Location of the sensor",
+                "example": "greenhouse-1",
+                "type": "string"
+              },
+              "manufacturer": {
+                "description": "Manufacturer of the sensor",
+                "example": "SensorCorp",
+                "type": "string"
+              },
+              "model": {
+                "description": "Model number of the sensor",
+                "example": "TC-100",
+                "type": "string"
+              },
+              "raw_data": {
+                "description": "Raw data as received from sensor",
+                "example": "22.5",
+                "type": "string"
+              },
+              "raw_hex": {
+                "description": "Raw binary data in hex format (for binary format errors)",
+                "example": "0100A3F5",
+                "type": "string"
+              },
+              "sensor_id": {
+                "description": "Unique identifier of the sensor",
+                "example": "TEMP001",
+                "type": "string"
+              },
+              "temperature": {
+                "description": "Temperature reading from the sensor",
+                "example": 22.5,
+                "format": "float",
+                "type": "number"
+              },
+              "timestamp": {
+                "description": "Original sensor timestamp",
+                "example": 1646123456.789,
+                "format": "double",
+                "type": "number"
+              },
+              "type": {
+                "description": "Type of sensor",
+                "example": "temperature",
+                "type": "string"
+              },
+              "unit": {
+                "description": "Unit of measurement (e.g., celsius)",
+                "example": "celsius",
+                "type": "string"
+              }
+            },
+            "type": "object"
+          }
+        }
+      },
+      "description": "Successful response with sensor data"
+    }
+  }
+}

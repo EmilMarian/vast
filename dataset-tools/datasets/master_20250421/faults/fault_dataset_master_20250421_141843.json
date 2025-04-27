@@ -1,0 +1,27 @@
+{
+  "dataset_type": "sensor_fault_analysis",
+  "created_at": "2025-04-21T14:18:43+03:00",
+  "sensor_host": "localhost",
+  "sensor_port": "12384",
+  "fault_scenarios": {
+    "none": {
+      "data_file": "datasets/master_20250421/faults/none/fault_none_20250421_141858.jsonl"
+    }
+  ,
+    "stuck": {
+      "data_file": "datasets/master_20250421/faults/stuck/fault_stuck_20250421_142518.jsonl"
+    }
+  ,
+    "drift": {
+      "data_file": "datasets/master_20250421/faults/drift/fault_drift_20250421_143139.jsonl"
+    }
+  ,
+    "spike": {
+      "data_file": "datasets/master_20250421/faults/spike/fault_spike_20250421_143759.jsonl"
+    }
+  ,
+    "dropout": {
+      "data_file": "datasets/master_20250421/faults/dropout/fault_dropout_20250421_144419.jsonl"
+    }
+  }
+}

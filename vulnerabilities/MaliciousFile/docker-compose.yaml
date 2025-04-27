@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  malicious-firmware-server:
+    build: .
+    container_name: malicious-firmware-server
+    restart: unless-stopped
+    ports:
+      - "38888:38888"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:38888/"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 5s
+    networks:
+      - iot_sensor-net
+
+networks:
+  iot_sensor-net:
+    external: true  # This will connect to your existing sensor network

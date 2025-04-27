@@ -1,0 +1,7 @@
+{
+  "dataset_type": "command_injection_analysis",
+  "created_at": "2025-04-23T17:22:42+03:00",
+  "attacker_server": "172.28.0.8",
+  "attacker_port": "4444",
+  "fault_scenarios": {
+    "none": {

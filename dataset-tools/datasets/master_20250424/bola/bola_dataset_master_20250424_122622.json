@@ -1,0 +1,39 @@
+{
+  "dataset_type": "bola_vulnerability_analysis",
+  "created_at": "2025-04-24T12:26:22+03:00",
+  "gateway_host": "192.168.1.109",
+  "gateway_port": "48080",
+  "sensor_host": "localhost",
+  "sensor_port": "12384",
+  "fault_scenarios": {
+    "none": {
+      "baseline_file": "datasets/master_20250424/bola/none_fault/bola_none_baseline_20250424_122627.jsonl",
+      "event_file": "datasets/master_20250424/bola/none_fault/bola_none_attack_20250424_122827.jsonl",
+      "post_event_file": "datasets/master_20250424/bola/none_fault/bola_none_post_event_20250424_123128.jsonl"
+    }
+  ,
+    "stuck": {
+      "baseline_file": "datasets/master_20250424/bola/stuck_fault/bola_stuck_baseline_20250424_123408.jsonl",
+      "event_file": "datasets/master_20250424/bola/stuck_fault/bola_stuck_attack_20250424_123608.jsonl",
+      "post_event_file": "datasets/master_20250424/bola/stuck_fault/bola_stuck_post_event_20250424_123908.jsonl"
+    }
+  ,
+    "drift": {
+      "baseline_file": "datasets/master_20250424/bola/drift_fault/bola_drift_baseline_20250424_124148.jsonl",
+      "event_file": "datasets/master_20250424/bola/drift_fault/bola_drift_attack_20250424_124349.jsonl",
+      "post_event_file": "datasets/master_20250424/bola/drift_fault/bola_drift_post_event_20250424_124649.jsonl"
+    }
+  ,
+    "spike": {
+      "baseline_file": "datasets/master_20250424/bola/spike_fault/bola_spike_baseline_20250424_124929.jsonl",
+      "event_file": "datasets/master_20250424/bola/spike_fault/bola_spike_attack_20250424_125129.jsonl",
+      "post_event_file": "datasets/master_20250424/bola/spike_fault/bola_spike_post_event_20250424_125429.jsonl"
+    }
+  ,
+    "dropout": {
+      "baseline_file": "datasets/master_20250424/bola/dropout_fault/bola_dropout_baseline_20250424_125709.jsonl",
+      "event_file": "datasets/master_20250424/bola/dropout_fault/bola_dropout_attack_20250424_125910.jsonl",
+      "post_event_file": "datasets/master_20250424/bola/dropout_fault/bola_dropout_post_event_20250424_130210.jsonl"
+    }
+  }
+}

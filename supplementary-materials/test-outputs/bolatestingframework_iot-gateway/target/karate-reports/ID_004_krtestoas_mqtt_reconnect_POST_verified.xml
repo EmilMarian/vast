@@ -1,0 +1,22 @@
+<testsuite failures="0" name="ID_004_krtestoas_mqtt_reconnect_POST_verified.feature" skipped="0" tests="1" time="0.113773"><testcase classname="ID_004_krtestoas_mqtt_reconnect_POST_verified" name="Test authorization bypass through user ID enumeration" time="0.113773"><system-out>* url 'http://192.168.1.109:48080' ........................................ passed
+Given path '/users/user1/sensors' ......................................... passed
+When method get ........................................................... passed
+Then status 200 ........................................................... passed
+And match response != null ................................................ passed
+And match response['TEMP001'] != null ..................................... passed
+Given path '/users/premium_user/sensors' .................................. passed
+When method get ........................................................... passed
+Then status 200  # Should be 403 if properly secured ...................... passed
+And match response != null ................................................ passed
+And match response['TEMP004'] != null ..................................... passed
+And match response['TEMP004'].sensitive_data != null ...................... passed
+Given path '/users/admin/sensors' ......................................... passed
+When method get ........................................................... passed
+Then status 200  # Should be 403 if properly secured ...................... passed
+And match response != null ................................................ passed
+Given path '/users/nonexistent/sensors' ................................... passed
+When method get ........................................................... passed
+Then status 404 ........................................................... passed
+And match response.error == 'User nonexistent not found' .................. passed
+</system-out></testcase>
+</testsuite>
