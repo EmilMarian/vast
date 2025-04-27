@@ -59,7 +59,7 @@ curl http://localhost:48080/data/TEMP001
 #### BOLA Vulnerability Example
 
 ```bash
-curl http://localhost:48080/users/premium_user/sensors
+curl -u admin:admin http://localhost:48080/users/premium_user/sensors
 ```
 
 #### Command Injection Example
