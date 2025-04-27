@@ -43,10 +43,6 @@ VAST (Vulnerable Agricultural Sensor Testbed) is a containerized, vulnerable-by-
    docker-compose -f observability/docker-compose.yaml up -d
    ```
 
-4. Verify installation:
-   ```bash
-   ./scripts/check-installation.sh
-   ```
 
 ## Usage Examples
 
