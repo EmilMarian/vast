@@ -29,13 +29,14 @@ services:
 
   # MQTT Broker - Message queue for sensor data
   mosquitto:
-    image: mosquitto:iot-vulnerable-mqtt
+    image: eclipse-mosquitto:latest
     container_name: mqtt-broker
     ports:
       - "1883:1883"
       - "9001:9001"
     volumes:
       - /mosquitto/config/config.conf:/mosquitto/config.conf
+      # in windows you will need to specify the absolute path in order to work 
       - /mosquitto/data:/mosquitto/data
       - /mosquitto/log:/mosquitto/log
     restart: always
