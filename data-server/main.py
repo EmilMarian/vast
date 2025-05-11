@@ -16,6 +16,8 @@ from contextlib import asynccontextmanager
 from data_generator import DataGenerator
 from data_storage import DataStorage
 from data_formatter import DataFormatter
+from models.models import WeatherEvent
+from weather_event_manager import WeatherEventManager
 
 # Import internal modules
 from models.models import (
@@ -78,6 +80,7 @@ data_generator = DataGenerator(sensor_registry=sensor_registry)
 data_formatter = DataFormatter()
 data_storage = DataStorage(max_size=DATA_HISTORY_SIZE)
 vulnerability_manager = VulnerabilityManager()
+weather_event_manager = WeatherEventManager() 
 
 # API security (deliberately vulnerable through defaults)
 api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
@@ -182,6 +185,16 @@ async def generate_sensor_data(sensor_id, sensor_config):
             logger.warning(f"Unknown sensor type '{sensor_type}' for {sensor_id}, defaulting to temperature")
             raw_reading = data_generator.generate_temperature_reading(sensor_id)
         
+          # Apply weather events to the reading (add this block)
+        if raw_reading is not None:
+            original_value = raw_reading.value
+            modified_value = weather_event_manager.apply_events_to_reading(
+                sensor_id, sensor_type, raw_reading.value)
+            raw_reading.value = modified_value
+            if original_value != modified_value:
+                logger.debug(f"Applied weather events to {sensor_id}: {original_value:.2f} → {modified_value:.2f}")
+        
+
         # Apply any active data vulnerabilities
         if vulnerability_manager.should_inject_data_vulnerability():
             vulnerability = vulnerability_manager.get_active_data_vulnerability()
@@ -233,6 +246,16 @@ async def generate_data_periodically():
                         logger.warning(f"Unknown sensor type '{sensor_type}' for {sensor_id}, defaulting to temperature")
                         raw_reading = data_generator.generate_temperature_reading(sensor_id)
                     
+                      # Apply weather events to the reading (add this block)
+                    if raw_reading is not None:
+                        original_value = raw_reading.value
+                        modified_value = weather_event_manager.apply_events_to_reading(
+                            sensor_id, sensor_type, raw_reading.value)
+                        raw_reading.value = modified_value
+                        if original_value != modified_value:
+                            logger.debug(f"Applied weather events to {sensor_id}: {original_value:.2f} → {modified_value:.2f}")
+                    
+                                
                     # Apply any active data vulnerabilities
                     if vulnerability_manager.should_inject_data_vulnerability():
                         vulnerability = vulnerability_manager.get_active_data_vulnerability()
@@ -723,6 +746,70 @@ async def regenerate_data(api_key: str = Depends(get_api_key)):
         data_storage.add_reading(sensor_id, enriched_reading)
         
     return {"status": "success", "message": "Data regenerated"}
+
+# Weather event endpoint
+@app.post("/generate-event")
+async def generate_weather_event(event: WeatherEvent, api_key: str = Depends(get_api_key)):
+    """Generate a weather event that affects sensor readings"""
+    try:
+        # Add the event
+        event_details = weather_event_manager.add_event(
+            event.event_name, 
+            event.duration, 
+            event.affected_sensors
+        )
+        
+        # Calculate end time as ISO string for response
+        end_time = datetime.fromtimestamp(event_details["end_time"]).isoformat()
+        
+        return {
+            "status": "success",
+            "message": f"Weather event '{event.event_name}' started",
+            "event_id": event_details["id"],
+            "start_time": datetime.fromtimestamp(event_details["start_time"]).isoformat(),
+            "end_time": end_time,
+            "affected_sensors": event_details["affected_sensors"] or "all sensors",
+            "duration": event.duration
+        }
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        logger.error(f"Error generating weather event: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Error generating weather event: {str(e)}")
+
+# Add an endpoint to get active events
+@app.get("/events")
+async def get_active_events(api_key: str = Depends(get_api_key)):
+    """Get all active weather events"""
+    events = weather_event_manager.get_active_events()
+    
+    # Format events for response
+    formatted_events = []
+    for event in events:
+        formatted_events.append({
+            "id": event["id"],
+            "event_name": event["event_name"],
+            "start_time": datetime.fromtimestamp(event["start_time"]).isoformat(),
+            "end_time": datetime.fromtimestamp(event["end_time"]).isoformat(),
+            "affected_sensors": event["affected_sensors"] or "all sensors",
+            "remaining_seconds": max(0, int(event["end_time"] - time.time()))
+        })
+    
+    return {
+        "active_events": formatted_events,
+        "count": len(formatted_events)
+    }
+
+# Add an endpoint to clear all events
+@app.post("/events/clear")
+async def clear_all_events(api_key: str = Depends(get_api_key)):
+    """Clear all active weather events"""
+    count = weather_event_manager.clear_all_events()
+    
+    return {
+        "status": "success",
+        "message": f"Cleared {count} weather events"
+    }
 
 # Run server
 if __name__ == "__main__":

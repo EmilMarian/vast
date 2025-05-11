@@ -5,9 +5,9 @@ info:
   version: 1.0.0
 
 servers:
-  - url: http://localhost:8000
+  - url: http://localhost:8800
     description: Local development server
-  - url: http://{ip}:8000
+  - url: http://{ip}:8800
     description: Local network access
     variables:
       ip:
@@ -25,10 +25,10 @@ components:
     SensorReading:
       type: object
       properties:
-        value: 
+        value:
           type: number
           format: float
-        unit: 
+        unit:
           type: string
         timestamp:
           type: number
@@ -99,7 +99,7 @@ components:
           type: string
         auth_bypass:
           type: boolean
-          
+
     SensorRegistration:
       type: object
       properties:
@@ -119,7 +119,7 @@ components:
       required:
         - sensor_id
         - type
-        
+
     Heartbeat:
       type: object
       properties:
@@ -128,7 +128,7 @@ components:
           format: float
       required:
         - timestamp
-        
+
     SensorStatus:
       type: object
       properties:
@@ -144,6 +144,107 @@ components:
           type: integer
         heartbeat_timeout_seconds:
           type: integer
+
+    CropData:
+      type: object
+      properties:
+        crop_type:
+          type: string
+        variety:
+          type: string
+        planting_date:
+          type: string
+        expected_harvest_date:
+          type: string
+        expected_yield:
+          type: number
+          format: float
+        growth_stage:
+          type: string
+        irrigation_schedule:
+          type: object
+          additionalProperties: true
+        fertilizer_schedule:
+          type: object
+          additionalProperties: true
+        pest_control_measures:
+          type: array
+          items:
+            type: string
+        proprietary_techniques:
+          type: array
+          items:
+            type: string
+
+    WeatherEvent:
+      type: object
+      properties:
+        event_name:
+          type: string
+        duration:
+          type: integer
+          description: Duration in seconds
+        affected_sensors:
+          type: array
+          items:
+            type: string
+          nullable: true
+      required:
+        - event_name
+        - duration
+
+    WeatherEventResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        message:
+          type: string
+        event_id:
+          type: string
+        start_time:
+          type: string
+          format: date-time
+        end_time:
+          type: string
+          format: date-time
+        affected_sensors:
+          type: string
+        duration:
+          type: integer
+
+    ActiveEvents:
+      type: object
+      properties:
+        active_events:
+          type: array
+          items:
+            type: object
+            properties:
+              id:
+                type: string
+              event_name:
+                type: string
+              start_time:
+                type: string
+                format: date-time
+              end_time:
+                type: string
+                format: date-time
+              affected_sensors:
+                type: string
+              remaining_seconds:
+                type: integer
+        count:
+          type: integer
+
+    EventClearResponse:
+      type: object
+      properties:
+        status:
+          type: string
+        message:
+          type: string
 
 paths:
   /:
@@ -383,5 +484,84 @@ paths:
                     type: string
                   message:
                     type: string
+        '401':
+          description: Invalid or missing API key
+
+  /farm/{farm_id}/crop-data/{field_id}:
+    get:
+      summary: Get crop data for a specific field (VULNERABLE - BOLA)
+      parameters:
+        - name: farm_id
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: field_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Crop data for specified field
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CropData'
+        '404':
+          description: Farm or field not found
+
+  /generate-event:
+    post:
+      summary: Generate a weather event that affects sensor readings
+      security:
+        - ApiKeyHeader: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WeatherEvent'
+      responses:
+        '200':
+          description: Weather event generation response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WeatherEventResponse'
+        '400':
+          description: Invalid event parameters
+        '401':
+          description: Invalid or missing API key
+        '500':
+          description: Error generating event
+
+  /events:
+    get:
+      summary: Get all active weather events
+      security:
+        - ApiKeyHeader: []
+      responses:
+        '200':
+          description: Active weather events
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActiveEvents'
+        '401':
+          description: Invalid or missing API key
+
+  /events/clear:
+    post:
+      summary: Clear all active weather events
+      security:
+        - ApiKeyHeader: []
+      responses:
+        '200':
+          description: Events clear response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EventClearResponse'
         '401':
           description: Invalid or missing API key

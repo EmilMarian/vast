@@ -1,0 +1,108 @@
+{
+    "sensors": {
+      "TEMP001": {
+        "type": "temperature",
+        "location": "greenhouse-north",
+        "environment": "greenhouse",
+        "crop_type": "tomato",
+        "growth_stage": "fruiting",
+        "soil_type": "loam",
+        "active": true,
+        "base_temp": 23.5,
+        "variation": 0.5,
+        "trend": 0.0,
+        "created_at": "2025-04-01T08:00:00"
+      },
+      "TEMP002": {
+        "type": "temperature",
+        "location": "greenhouse-south",
+        "environment": "greenhouse",
+        "crop_type": "tomato",
+        "growth_stage": "fruiting",
+        "soil_type": "loam",
+        "active": true,
+        "base_temp": 24.2,
+        "variation": 0.7,
+        "trend": 0.02,
+        "created_at": "2025-04-01T08:00:00"
+      },
+      "TEMP003": {
+        "type": "temperature",
+        "location": "greenhouse-east",
+        "environment": "greenhouse",
+        "crop_type": "tomato",
+        "growth_stage": "fruiting",
+        "soil_type": "loam",
+        "active": true,
+        "base_temp": 22.8,
+        "variation": 0.6,
+        "trend": -0.01,
+        "created_at": "2025-04-01T08:00:00"
+      },
+      "TEMP004": {
+        "type": "temperature",
+        "location": "greenhouse-west",
+        "environment": "greenhouse",
+        "crop_type": "tomato",
+        "growth_stage": "fruiting",
+        "soil_type": "loam",
+        "active": true,
+        "base_temp": 23.0,
+        "variation": 0.8,
+        "trend": 0.01,
+        "created_at": "2025-04-01T08:00:00"
+      },
+      "TEMP005": {
+        "type": "temperature",
+        "location": "greenhouse-center",
+        "environment": "greenhouse",
+        "crop_type": "tomato",
+        "growth_stage": "fruiting",
+        "soil_type": "loam",
+        "active": true,
+        "base_temp": 23.7,
+        "variation": 0.4,
+        "trend": 0.0,
+        "created_at": "2025-04-01T08:00:00"
+      },
+      "TEMP006": {
+        "type": "temperature",
+        "location": "greenhouse-roof",
+        "environment": "greenhouse",
+        "crop_type": "tomato",
+        "growth_stage": "fruiting",
+        "soil_type": "loam",
+        "active": true,
+        "base_temp": 24.5,
+        "variation": 1.2,
+        "trend": 0.03,
+        "created_at": "2025-04-01T08:00:00"
+      },
+      "TEMP007": {
+        "type": "temperature",
+        "location": "greenhouse-floor",
+        "environment": "greenhouse",
+        "crop_type": "tomato",
+        "growth_stage": "fruiting",
+        "soil_type": "loam",
+        "active": true,
+        "base_temp": 22.3,
+        "variation": 0.3,
+        "trend": -0.01,
+        "created_at": "2025-04-01T08:00:00"
+      },
+      "TEMP008": {
+        "type": "temperature",
+        "location": "control-room",
+        "environment": "greenhouse",
+        "crop_type": "tomato",
+        "growth_stage": "monitoring",
+        "soil_type": "none",
+        "active": true,
+        "base_temp": 23.0,
+        "variation": 0.2,
+        "trend": 0.0,
+        "created_at": "2025-04-01T08:00:00"
+      }
+    }
+  }
