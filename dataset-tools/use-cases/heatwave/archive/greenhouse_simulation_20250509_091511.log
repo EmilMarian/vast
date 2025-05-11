@@ -1,0 +1,42 @@
+2025-05-09 09:15:11,717 - INFO - Starting tomato greenhouse heatwave and DDoS attack simulation
+2025-05-09 09:15:11,717 - INFO - Monitoring baseline temperature for tomato greenhouse...
+2025-05-09 09:15:11,807 - INFO - Normal Operation: Reported temp: 23.31°C, Actual: 22.95°C, CPU: 0%
+2025-05-09 09:15:16,904 - INFO - Normal Operation: Reported temp: 23.86°C, Actual: 23.56°C, CPU: 0%
+2025-05-09 09:15:21,979 - INFO - Normal Operation: Reported temp: 23.34°C, Actual: 23.08°C, CPU: 0%
+2025-05-09 09:15:27,025 - INFO - Normal Operation: Reported temp: 23.65°C, Actual: 23.82°C, CPU: 0%
+2025-05-09 09:15:32,081 - INFO - Normal Operation: Reported temp: 23.66°C, Actual: 24.1°C, CPU: 0%
+2025-05-09 09:15:37,147 - INFO - Normal Operation: Reported temp: 23.81°C, Actual: 23.52°C, CPU: 0%
+2025-05-09 09:15:42,149 - INFO - Starting simulated heatwave for tomato greenhouse...
+2025-05-09 09:15:42,179 - INFO - Heatwave event activated successfully: heatwave_1746771342
+2025-05-09 09:15:42,181 - INFO - Event will end at: 2025-05-09T06:16:42.175359
+2025-05-09 09:15:42,326 - INFO - Heatwave: Reported temp: 23.75°C, Actual: 23.46°C, CPU: 0%
+2025-05-09 09:15:47,405 - INFO - Heatwave: Reported temp: 42.73°C, Actual: 42.87523567130094°C, CPU: 0%
+2025-05-09 09:15:52,452 - INFO - Heatwave: Reported temp: 39.75°C, Actual: 39.62479050338497°C, CPU: 0%
+2025-05-09 09:15:57,508 - INFO - Heatwave: Reported temp: 38.99°C, Actual: 39.03390876364947°C, CPU: 0%
+2025-05-09 09:16:03,045 - INFO - Heatwave: Reported temp: 41.79°C, Actual: 41.41590713863492°C, CPU: 0%
+2025-05-09 09:16:08,206 - INFO - Heatwave: Reported temp: 33.16°C, Actual: 33.28564568143745°C, CPU: 0%
+2025-05-09 09:16:13,211 - INFO - Initiating DDoS attack from sensor...
+2025-05-09 09:16:13,232 - INFO - DDoS attack initiation response: 200
+2025-05-09 09:16:13,232 - INFO - Setting sensor to stuck fault mode...
+2025-05-09 09:16:13,257 - INFO - Fault simulation response: 200
+2025-05-09 09:16:13,332 - INFO - Attack Active: Reported temp: 24.52°C, Actual: 36.58642272987043°C, CPU: 0%
+2025-05-09 09:16:18,561 - INFO - Attack Active: Reported temp: 24.52°C, Actual: 36.04581968505994°C, CPU: 0%
+2025-05-09 09:16:23,609 - INFO - Attack Active: Reported temp: 24.52°C, Actual: 36.72746383286666°C, CPU: 0%
+2025-05-09 09:16:28,755 - INFO - Attack Active: Reported temp: 24.52°C, Actual: 39.07556463917922°C, CPU: 0%
+2025-05-09 09:16:33,804 - INFO - Attack Active: Reported temp: 24.52°C, Actual: 37.738529995090474°C, CPU: 0%
+2025-05-09 09:16:38,859 - INFO - Attack Active: Reported temp: 24.52°C, Actual: 36.829566447143506°C, CPU: 0%
+2025-05-09 09:16:43,909 - INFO - Attack Active: Reported temp: 24.52°C, Actual: 22.37°C, CPU: 0%
+2025-05-09 09:16:48,996 - INFO - Attack Active: Reported temp: 24.52°C, Actual: 23.28°C, CPU: 0%
+2025-05-09 09:16:54,085 - INFO - Attack Active: Reported temp: 24.52°C, Actual: 22.4°C, CPU: 0%
+2025-05-09 09:16:59,183 - INFO - Attack Active: Reported temp: 24.52°C, Actual: 22.73°C, CPU: 0%
+2025-05-09 09:17:04,230 - INFO - Attack Active: Reported temp: 24.52°C, Actual: 22.09°C, CPU: 0%
+2025-05-09 09:17:09,275 - INFO - Attack Active: Reported temp: 24.52°C, Actual: 22.76°C, CPU: 0%
+2025-05-09 09:17:14,277 - INFO - Creating visualization of tomato greenhouse scenario...
+2025-05-09 09:17:15,011 - WARNING - No artists with labels found to put in legend.  Note that artists whose label start with an underscore are ignored when legend() is called with no argument.
+2025-05-09 09:17:18,482 - INFO - Visualization saved to tomato_greenhouse_ddos_attack_20250509_091715.png
+2025-05-09 09:17:18,499 - INFO - Data saved to tomato_greenhouse_ddos_attack_data_20250509_091715.csv
+2025-05-09 09:17:18,665 - INFO - Cleaned up Cleared 0 weather events
+2025-05-09 09:17:18,701 - INFO - Scenario complete. Estimated yield impact: 0.4%
+2025-05-09 09:17:18,702 - INFO - At temperatures exceeding 35°C, tomato plants experience heat stress affecting pollen viability
+2025-05-09 09:17:18,702 - INFO - and fruit set, leading to the calculated yield reduction. In a commercial greenhouse,
+2025-05-09 09:17:18,705 - INFO - this would translate to significant economic losses.

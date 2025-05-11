@@ -109,3 +109,11 @@ class CropData(BaseModel):
     fertilizer_schedule: Dict[str, str]
     pest_control_measures: List[str]
     proprietary_techniques: Optional[List[str]] = None
+
+class WeatherEvent(BaseModel):
+    """Model for simulated weather events"""
+    event_name: str
+    duration: str  # Duration string like "30s", "5m", "1h"
+    affected_sensors: Optional[List[str]] = None  # If None, affects all sensors
+    start_time: float = Field(default_factory=lambda: datetime.now().timestamp())
+    end_time: Optional[float] = None  # Will be calculated based on duration
