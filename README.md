@@ -7,6 +7,11 @@ VAST (Vulnerable Agricultural Sensor Testbed) is a containerized, vulnerable-by-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](https://www.docker.com/)
 
+
+https://github.com/user-attachments/assets/4d1bbfe0-f433-469d-87a9-ad929b8d7b12
+
+
+
 ## Features
 
 - **Multi-layered Architecture**: Simulates complete agricultural IoT stack from sensors to gateway to client
