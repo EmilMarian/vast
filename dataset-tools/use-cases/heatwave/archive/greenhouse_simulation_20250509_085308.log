@@ -1,0 +1,41 @@
+2025-05-09 08:53:08,432 - INFO - Starting tomato greenhouse heatwave and DDoS attack simulation
+2025-05-09 08:53:08,482 - INFO - Monitoring baseline temperature for tomato greenhouse...
+2025-05-09 08:53:08,961 - INFO - Normal Operation: Reported temp: 22.64°C, Actual: 21.31°C, CPU: 0%
+2025-05-09 08:53:14,025 - INFO - Normal Operation: Reported temp: 21.73°C, Actual: 22.11°C, CPU: 0%
+2025-05-09 08:53:19,292 - INFO - Normal Operation: Reported temp: 22.17°C, Actual: 22.92°C, CPU: 0%
+2025-05-09 08:53:24,348 - INFO - Normal Operation: Reported temp: 23.05°C, Actual: 22.84°C, CPU: 0%
+2025-05-09 08:53:29,484 - INFO - Normal Operation: Reported temp: 22.55°C, Actual: 22.11°C, CPU: 0%
+2025-05-09 08:53:34,532 - INFO - Normal Operation: Reported temp: 21.4°C, Actual: 21.53°C, CPU: 0%
+2025-05-09 08:53:39,533 - INFO - Starting simulated heatwave for tomato greenhouse...
+2025-05-09 08:53:39,548 - INFO - Heatwave event activated successfully: heatwave_1746770019
+2025-05-09 08:53:39,549 - INFO - Event will end at: 2025-05-09T05:54:39.542278
+2025-05-09 08:53:39,598 - INFO - Heatwave: Reported temp: 22.82°C, Actual: 22.35°C, CPU: 0%
+2025-05-09 08:53:44,811 - INFO - Heatwave: Reported temp: 32.66°C, Actual: 32.50110279992491°C, CPU: 0%
+2025-05-09 08:53:49,982 - INFO - Heatwave: Reported temp: 34.7°C, Actual: 34.563247765506254°C, CPU: 0%
+2025-05-09 08:53:55,028 - INFO - Heatwave: Reported temp: 41.07°C, Actual: 41.25536813631159°C, CPU: 0%
+2025-05-09 08:54:00,094 - INFO - Heatwave: Reported temp: 35.12°C, Actual: 34.85815588186425°C, CPU: 0%
+2025-05-09 08:54:05,146 - INFO - Heatwave: Reported temp: 41.95°C, Actual: 41.70020813892016°C, CPU: 0%
+2025-05-09 08:54:10,148 - INFO - Initiating DDoS attack from sensor...
+2025-05-09 08:54:10,497 - INFO - DDoS attack initiation response: 200
+2025-05-09 08:54:10,497 - INFO - Setting sensor to stuck fault mode...
+2025-05-09 08:54:10,589 - INFO - Fault simulation response: 200
+2025-05-09 08:54:10,686 - INFO - Attack Active: Reported temp: 24.51°C, Actual: 42.39899856135002°C, CPU: 0%
+2025-05-09 08:54:15,781 - INFO - Attack Active: Reported temp: 24.51°C, Actual: 38.80520206842833°C, CPU: 0%
+2025-05-09 08:54:20,827 - INFO - Attack Active: Reported temp: 24.51°C, Actual: 33.432440015605216°C, CPU: 0%
+2025-05-09 08:54:25,889 - INFO - Attack Active: Reported temp: 24.51°C, Actual: 35.54681258282235°C, CPU: 0%
+2025-05-09 08:54:31,083 - INFO - Attack Active: Reported temp: 24.51°C, Actual: 37.76287012336066°C, CPU: 0%
+2025-05-09 08:54:36,404 - INFO - Attack Active: Reported temp: 24.51°C, Actual: 41.872700707987725°C, CPU: 0%
+2025-05-09 08:54:41,510 - INFO - Attack Active: Reported temp: 24.51°C, Actual: 39.68967402955381°C, CPU: 0%
+2025-05-09 08:54:46,691 - INFO - Attack Active: Reported temp: 24.51°C, Actual: 22.47°C, CPU: 0%
+2025-05-09 08:54:51,746 - INFO - Attack Active: Reported temp: 24.51°C, Actual: 21.93°C, CPU: 0%
+2025-05-09 08:54:56,862 - INFO - Attack Active: Reported temp: 24.51°C, Actual: 11.34°C, CPU: 0%
+2025-05-09 08:55:01,939 - INFO - Attack Active: Reported temp: 24.51°C, Actual: 21.61°C, CPU: 0%
+2025-05-09 08:55:06,980 - INFO - Attack Active: Reported temp: 24.51°C, Actual: 22.01°C, CPU: 0%
+2025-05-09 08:55:11,982 - INFO - Creating visualization of tomato greenhouse scenario...
+2025-05-09 08:55:21,201 - INFO - Visualization saved to tomato_greenhouse_ddos_attack_20250509_085514.png
+2025-05-09 08:55:21,217 - INFO - Data saved to tomato_greenhouse_ddos_attack_data_20250509_085514.csv
+2025-05-09 08:55:21,233 - INFO - Cleaned up Cleared 0 weather events
+2025-05-09 08:55:21,233 - INFO - Scenario complete. Estimated yield impact: 0.3%
+2025-05-09 08:55:21,233 - INFO - At temperatures exceeding 35°C, tomato plants experience heat stress affecting pollen viability
+2025-05-09 08:55:21,233 - INFO - and fruit set, leading to the calculated yield reduction. In a commercial greenhouse,
+2025-05-09 08:55:21,233 - INFO - this would translate to significant economic losses.

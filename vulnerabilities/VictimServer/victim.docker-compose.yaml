@@ -8,7 +8,7 @@ services:
     ports:
       - "8443:8443"
     networks:
-      - iot_sensor-net
+      - vast_sensor-net
     deploy:
       resources:
         limits:
@@ -25,5 +25,5 @@ services:
       start_period: 10s
 
 networks:
-  iot_sensor-net:
+  vast_sensor-net:
     external: true  # This will connect to your existing sensor network

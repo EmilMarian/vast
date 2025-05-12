@@ -16,7 +16,7 @@ services:
       - '--web.console.templates=/etc/prometheus/consoles'
       - '--web.enable-lifecycle'
     networks:
-      - iot_sensor-net
+      - vast_sensor-net
 
   node-exporter:
     image: prom/node-exporter:latest
@@ -24,7 +24,7 @@ services:
     ports:
       - "9100:9100"
     networks:
-      - iot_sensor-net
+      - vast_sensor-net
     
   cadvisor:
     image: gcr.io/cadvisor/cadvisor:latest
@@ -38,7 +38,7 @@ services:
       - /var/lib/docker/:/var/lib/docker:ro
       - /dev/disk/:/dev/disk:ro
     networks:
-      - iot_sensor-net
+      - vast_sensor-net
     depends_on:
       - prometheus
 
@@ -56,7 +56,7 @@ services:
       - GF_SECURITY_ADMIN_PASSWORD=admin
       - GF_USERS_ALLOW_SIGN_UP=false
     networks:
-      - iot_sensor-net
+      - vast_sensor-net
     depends_on:
       - prometheus
 
@@ -68,7 +68,7 @@ services:
       # Use host addresses instead of Docker networking
       - SENSORS=temperature-sensor-01,temperature-sensor-02,temperature-sensor-03,temperature-sensor-04
     networks:
-      - iot_sensor-net
+      - vast_sensor-net
     depends_on:
       - prometheus
 
@@ -77,5 +77,5 @@ volumes:
   grafana_data:
 
 networks:
-  iot_sensor-net:
+  vast_sensor-net:
     external: true  # This will connect to your existing sensor network
